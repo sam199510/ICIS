@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icis.backend.dao.IcisResidentMapper">
+  <resultMap id="BaseResultMap" type="com.icis.backend.entity.IcisResident">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="tel" jdbcType="BIGINT" property="tel" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="head_photo" jdbcType="VARCHAR" property="headPhoto" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="live_age" jdbcType="INTEGER" property="liveAge" />
+    <result column="signature" jdbcType="VARCHAR" property="signature" />
+    <result column="pay_passcode" jdbcType="VARCHAR" property="payPasscode" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, password, tel, sex, head_photo, nickname, address, live_age, signature, 
+    pay_passcode
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icis_resident
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from icis_resident
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.icis.backend.entity.IcisResident">
+    insert into icis_resident (id, username, password, 
+      tel, sex, head_photo, 
+      nickname, address, live_age, 
+      signature, pay_passcode)
+    values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{tel,jdbcType=BIGINT}, #{sex,jdbcType=VARCHAR}, #{headPhoto,jdbcType=VARCHAR}, 
+      #{nickname,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{liveAge,jdbcType=INTEGER}, 
+      #{signature,jdbcType=VARCHAR}, #{payPasscode,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.icis.backend.entity.IcisResident">
+    insert into icis_resident
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="tel != null">
+        tel,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="headPhoto != null">
+        head_photo,
+      </if>
+      <if test="nickname != null">
+        nickname,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="liveAge != null">
+        live_age,
+      </if>
+      <if test="signature != null">
+        signature,
+      </if>
+      <if test="payPasscode != null">
+        pay_passcode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        #{tel,jdbcType=BIGINT},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="headPhoto != null">
+        #{headPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="liveAge != null">
+        #{liveAge,jdbcType=INTEGER},
+      </if>
+      <if test="signature != null">
+        #{signature,jdbcType=VARCHAR},
+      </if>
+      <if test="payPasscode != null">
+        #{payPasscode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icis.backend.entity.IcisResident">
+    update icis_resident
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        tel = #{tel,jdbcType=BIGINT},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="headPhoto != null">
+        head_photo = #{headPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="liveAge != null">
+        live_age = #{liveAge,jdbcType=INTEGER},
+      </if>
+      <if test="signature != null">
+        signature = #{signature,jdbcType=VARCHAR},
+      </if>
+      <if test="payPasscode != null">
+        pay_passcode = #{payPasscode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icis.backend.entity.IcisResident">
+    update icis_resident
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      tel = #{tel,jdbcType=BIGINT},
+      sex = #{sex,jdbcType=VARCHAR},
+      head_photo = #{headPhoto,jdbcType=VARCHAR},
+      nickname = #{nickname,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      live_age = #{liveAge,jdbcType=INTEGER},
+      signature = #{signature,jdbcType=VARCHAR},
+      pay_passcode = #{payPasscode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectAllResident" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_resident
+  </select>
+  <select id="isExistAssignUser" parameterType="com.icis.backend.entity.IcisResident" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_resident
+    WHERE username = #{username,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByUsernameAndPassword" parameterType="com.icis.backend.entity.IcisResident" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_resident
+    WHERE username = #{username,jdbcType=VARCHAR}
+    AND password = #{password,jdbcType=VARCHAR}
+  </select>
+  <select id="selectIcisResidentByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_resident
+    WHERE username = #{username,jdbcType=VARCHAR}
+  </select>
+</mapper>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icis.backend.dao.IcisNotificationMapper">
+  <resultMap id="BaseResultMap" type="com.icis.backend.entity.IcisNotification">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="extent" jdbcType="BIGINT" property="extent" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="date" jdbcType="DATE" property="date" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, extent, content, unit, date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icis_notification
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from icis_notification
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.icis.backend.entity.IcisNotification">
+    insert into icis_notification (id, extent, content, 
+      unit, date)
+    values (#{id,jdbcType=BIGINT}, #{extent,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR}, 
+      #{unit,jdbcType=VARCHAR}, #{date,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.icis.backend.entity.IcisNotification">
+    insert into icis_notification
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="extent != null">
+        extent,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="unit != null">
+        unit,
+      </if>
+      <if test="date != null">
+        date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="extent != null">
+        #{extent,jdbcType=BIGINT},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="unit != null">
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icis.backend.entity.IcisNotification">
+    update icis_notification
+    <set>
+      <if test="extent != null">
+        extent = #{extent,jdbcType=BIGINT},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="unit != null">
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        date = #{date,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icis.backend.entity.IcisNotification">
+    update icis_notification
+    set extent = #{extent,jdbcType=BIGINT},
+      content = #{content,jdbcType=VARCHAR},
+      unit = #{unit,jdbcType=VARCHAR},
+      date = #{date,jdbcType=DATE}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectAllNotification" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_notification
+    ORDER BY date DESC
+  </select>
+</mapper>
