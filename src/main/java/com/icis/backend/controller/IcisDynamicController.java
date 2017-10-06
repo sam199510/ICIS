@@ -22,7 +22,6 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 @Controller
 @RequestMapping("/icisDynamic")
@@ -197,6 +196,8 @@ public class IcisDynamicController {
             Long creatorId = icisDynamic.getCreatorId();
             String creatorNickname = this.icisResidentServiceI.selectByPrimaryKey(creatorId).getNickname();
             icisDynamicItem.setDynamicCreatorNickname(creatorNickname);
+            //获取朋友圈定位功能
+            icisDynamicItem.setDynamicPosition(icisDynamic.getPublishPosition());
             //获取用户头像
             String dynamicUserHeadPhoto = this.icisResidentServiceI.selectByPrimaryKey(creatorId).getHeadPhoto();
             if (dynamicUserHeadPhoto == null) {

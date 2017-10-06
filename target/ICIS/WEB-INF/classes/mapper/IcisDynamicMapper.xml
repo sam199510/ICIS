@@ -7,9 +7,10 @@
     <result column="publish_time" jdbcType="TIMESTAMP" property="publishTime" />
     <result column="publish_content" jdbcType="VARCHAR" property="publishContent" />
     <result column="publish_photo" jdbcType="VARCHAR" property="publishPhoto" />
+    <result column="publish_position" jdbcType="VARCHAR" property="publishPosition" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, creator_id, publish_time, publish_content, publish_photo
+    id, creator_id, publish_time, publish_content, publish_photo, publish_position
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
@@ -23,9 +24,11 @@
   </delete>
   <insert id="insert" parameterType="com.icis.backend.entity.IcisDynamic">
     insert into icis_dynamic (id, creator_id, publish_time, 
-      publish_content, publish_photo)
+      publish_content, publish_photo, publish_position
+      )
     values (#{id,jdbcType=BIGINT}, #{creatorId,jdbcType=BIGINT}, #{publishTime,jdbcType=TIMESTAMP}, 
-      #{publishContent,jdbcType=VARCHAR}, #{publishPhoto,jdbcType=VARCHAR})
+      #{publishContent,jdbcType=VARCHAR}, #{publishPhoto,jdbcType=VARCHAR}, #{publishPosition,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.icis.backend.entity.IcisDynamic">
     insert into icis_dynamic
@@ -45,6 +48,9 @@
       <if test="publishPhoto != null">
         publish_photo,
       </if>
+      <if test="publishPosition != null">
+        publish_position,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -61,6 +67,9 @@
       </if>
       <if test="publishPhoto != null">
         #{publishPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="publishPosition != null">
+        #{publishPosition,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -79,6 +88,9 @@
       <if test="publishPhoto != null">
         publish_photo = #{publishPhoto,jdbcType=VARCHAR},
       </if>
+      <if test="publishPosition != null">
+        publish_position = #{publishPosition,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -87,7 +99,8 @@
     set creator_id = #{creatorId,jdbcType=BIGINT},
       publish_time = #{publishTime,jdbcType=TIMESTAMP},
       publish_content = #{publishContent,jdbcType=VARCHAR},
-      publish_photo = #{publishPhoto,jdbcType=VARCHAR}
+      publish_photo = #{publishPhoto,jdbcType=VARCHAR},
+      publish_position = #{publishPosition,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <select id="selectAllIcisDynamic" resultMap="BaseResultMap">

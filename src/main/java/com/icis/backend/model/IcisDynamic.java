@@ -12,6 +12,8 @@ public class IcisDynamic {
 
     private String dynamicPublishContent;
 
+    private String dynamicPosition;
+
     private String dynamicPublishPhoto;
 
     private List<IcisDynamicSupport> icisDynamicSupports;
@@ -36,6 +38,14 @@ public class IcisDynamic {
 
     public String getDynamicPublishContent() {
         return dynamicPublishContent;
+    }
+
+    public String getDynamicPosition() {
+        return dynamicPosition;
+    }
+
+    public void setDynamicPosition(String dynamicPosition) {
+        this.dynamicPosition = dynamicPosition;
     }
 
     public void setDynamicPublishContent(String dynamicPublishContent) {

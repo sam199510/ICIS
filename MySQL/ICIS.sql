@@ -11,11 +11,37 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 28/09/2017 14:30:43
+ Date: 06/10/2017 19:58:59
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for icis_activity
+-- ----------------------------
+DROP TABLE IF EXISTS `icis_activity`;
+CREATE TABLE `icis_activity` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '活动表id',
+  `title` varchar(255) DEFAULT NULL COMMENT '活动名称',
+  `image` varchar(500) DEFAULT NULL COMMENT '活动图片',
+  `publish_time` datetime DEFAULT NULL COMMENT '活动推送时间',
+  `time` varchar(255) DEFAULT NULL COMMENT '活动举行时间',
+  `position` varchar(500) DEFAULT NULL COMMENT '活动举办地点',
+  `content1` varchar(255) DEFAULT NULL COMMENT '活动内容1',
+  `content2` varchar(255) DEFAULT NULL COMMENT '活动内容2',
+  `content3` varchar(255) DEFAULT NULL COMMENT '活动内容3',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的活动表使用';
+
+-- ----------------------------
+-- Records of icis_activity
+-- ----------------------------
+BEGIN;
+INSERT INTO `icis_activity` VALUES (1, '“Merry Christmas” 圣诞大餐', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/201353115003421.jpg', '2017-10-05 18:12:09', '12月24日晚（平安夜）PM6:00-9:00', '会所西餐厅【社区活动,创意】', '精心设计圣诞精美食品。', '免费奉送圣诞礼物一份。', '现场举行大抽奖。');
+INSERT INTO `icis_activity` VALUES (2, '2017寒假社会实践 活动方案', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/c03fd574882718a5f3e83e.png', '2017-10-05 18:13:30', '12月30日早 AM6:00-12:00', '圆形集合【社区活动,团结】', '集体社区清理。', '装扮自己所在区域。', '现在评比颁奖。');
+INSERT INTO `icis_activity` VALUES (3, '义诊活动方案', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/175f3e42642794c59922584ddfcae08f.jpg', '2017-10-05 18:14:22', '1月09日 全天', '圆形广场【社区活动,义诊】', '免费领取就诊卷。', '排队就诊。', 'PM 5:00-6:30领取报告单。');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for icis_appointment_item
@@ -67,6 +93,39 @@ CREATE TABLE `icis_appointment_record` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的预约记录表使用';
 
 -- ----------------------------
+-- Table structure for icis_contacts
+-- ----------------------------
+DROP TABLE IF EXISTS `icis_contacts`;
+CREATE TABLE `icis_contacts` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '通讯录id',
+  `name` varchar(50) DEFAULT NULL COMMENT '姓名',
+  `telephone` bigint(20) DEFAULT NULL COMMENT '电话',
+  `email` varchar(50) DEFAULT NULL COMMENT '邮箱',
+  `headImg` varchar(500) DEFAULT NULL COMMENT '头像',
+  `sex` varchar(10) DEFAULT NULL COMMENT '性别',
+  `account` varchar(50) DEFAULT NULL COMMENT '账户名',
+  `address` varchar(500) DEFAULT NULL COMMENT '住址',
+  `noteInfomation` varchar(255) DEFAULT NULL COMMENT '备注信息',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的通讯录表使用';
+
+-- ----------------------------
+-- Records of icis_contacts
+-- ----------------------------
+BEGIN;
+INSERT INTO `icis_contacts` VALUES (1, 'Retala', 17826805984, '474205755@qq.com', 'renwutouxiang1.jpg', '女', 'znsh10102', '浙江省杭州市石马社区10幢102单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (2, 'Alpha', 17826805432, '17823639@qq.com', 'renwutouxiang2.jpg', '女', 'znsh10101', '浙江省杭州市石马社区10幢101单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (3, 'Tila', 15323340192, '15323340192@163.com', 'renwutouxiang3.jpg', '女', 'znsh10107', '浙江省杭州市石马社区10幢107单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (4, '李宁', 17826808781, '2834781933@qq.com', 'renwutouxiang4.jpg', '男', 'znsh07402', '浙江省杭州市石马社区7幢402单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (5, 'Jalatimy', 17826892370, '17826892370@163.com', 'renwutouxiang5.jpg', '女', 'znsh12306', '浙江省杭州市石马社区12幢306单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (6, 'Cotana', 17826823930, '17826823930@163.com', 'renwutouxiang6.jpg', '女', 'znsh01203', '浙江省杭州市石马社区1幢203单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (7, 'Espero', 17326829170, '17326829170@163.com', 'renwutouxiang7.jpg', '男', 'znsh10302', '浙江省杭州市石马社区10幢302单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (8, 'Liber', 13137853830, '13137853830@163.com', 'renwutouxiang8.jpg', '男', 'znsh07102', '浙江省杭州市石马社区7幢102单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (9, 'ZetMitty', 17834986309, '17834986309@163.com', 'renwutouxiang9.jpg', '女', 'znsh09103', '浙江省杭州市石马社区9幢103单元', '暂无备注信息');
+INSERT INTO `icis_contacts` VALUES (14, 'sam199510', 17826807795, '17826807795@163.com', 'fafda.png', '男', 'sam', '西和公寓10#606', '暂无');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for icis_dynamic
 -- ----------------------------
 DROP TABLE IF EXISTS `icis_dynamic`;
@@ -76,8 +135,16 @@ CREATE TABLE `icis_dynamic` (
   `publish_time` datetime DEFAULT NULL COMMENT '朋友圈发布时间',
   `publish_content` varchar(500) DEFAULT NULL COMMENT '朋友圈文字内容',
   `publish_photo` varchar(500) DEFAULT NULL COMMENT '朋友圈照片',
+  `publish_position` varchar(500) DEFAULT NULL COMMENT '朋友圈动态定位',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的朋友圈动态表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的朋友圈动态表使用';
+
+-- ----------------------------
+-- Records of icis_dynamic
+-- ----------------------------
+BEGIN;
+INSERT INTO `icis_dynamic` VALUES (1, 1, '2017-10-02 16:17:48', '小区的治安是越来越好了( ⊙ o ⊙ )啊！', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/dynamic/1.png', '长安镇华府社区');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for icis_dynamic_comment
@@ -90,7 +157,18 @@ CREATE TABLE `icis_dynamic_comment` (
   `content` varchar(500) DEFAULT NULL COMMENT '评论内容',
   `comment_time` datetime DEFAULT NULL COMMENT '评论时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的朋友圈动态评论表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的朋友圈动态评论表使用';
+
+-- ----------------------------
+-- Records of icis_dynamic_comment
+-- ----------------------------
+BEGIN;
+INSERT INTO `icis_dynamic_comment` VALUES (1, 1, 1, '治安的确变好了', '2017-10-02 19:20:48');
+INSERT INTO `icis_dynamic_comment` VALUES (2, 1, 1, '保安大叔的态度也变好了', '2017-10-02 19:21:15');
+INSERT INTO `icis_dynamic_comment` VALUES (3, 1, 3, '环境更加绿色化发展了', '2017-10-02 19:21:59');
+INSERT INTO `icis_dynamic_comment` VALUES (4, 1, 4, '小区会有美好的未来', '2017-10-02 19:22:30');
+INSERT INTO `icis_dynamic_comment` VALUES (5, 1, 5, '小区是我家，安全靠大家！', '2017-10-02 19:23:03');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for icis_dynamic_support
@@ -102,7 +180,16 @@ CREATE TABLE `icis_dynamic_support` (
   `supportor_id` bigint(20) DEFAULT NULL COMMENT '点赞者id',
   `supporter_time` datetime DEFAULT NULL COMMENT '点赞时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的朋友圈动态点赞表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的朋友圈动态点赞表使用';
+
+-- ----------------------------
+-- Records of icis_dynamic_support
+-- ----------------------------
+BEGIN;
+INSERT INTO `icis_dynamic_support` VALUES (1, 1, 1, '2017-10-02 18:41:20');
+INSERT INTO `icis_dynamic_support` VALUES (3, 1, 3, '2017-10-02 18:41:29');
+INSERT INTO `icis_dynamic_support` VALUES (4, 1, 5, '2017-10-02 18:41:37');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for icis_feedback
@@ -116,7 +203,7 @@ CREATE TABLE `icis_feedback` (
   `photo3` varchar(500) DEFAULT NULL COMMENT '意见反馈图片3',
   `time` datetime DEFAULT NULL COMMENT '意见反馈时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的反馈表使用';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的反馈表使用';
 
 -- ----------------------------
 -- Table structure for icis_notification
@@ -171,8 +258,18 @@ CREATE TABLE `icis_repairs` (
   `photo3` varchar(500) DEFAULT NULL COMMENT '报修图3',
   `photo4` varchar(500) DEFAULT NULL COMMENT '报修图4',
   `resident_id` bigint(20) DEFAULT NULL COMMENT '报修居民用户id',
+  `time` datetime DEFAULT NULL COMMENT '报修时间',
+  `is_complete` int(11) DEFAULT NULL COMMENT '是否已经修复',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的报修表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的报修表使用';
+
+-- ----------------------------
+-- Records of icis_repairs
+-- ----------------------------
+BEGIN;
+INSERT INTO `icis_repairs` VALUES (1, '10幢105单元', '厕所灯坏道了', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/repairs/3.png', NULL, NULL, NULL, 1, '2017-10-05 22:49:06', 1);
+INSERT INTO `icis_repairs` VALUES (2, '10606', '厕所灯坏道了发范德萨发', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/repairs/4.png', NULL, NULL, NULL, 1, '2017-10-05 22:50:54', 0);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for icis_resident
@@ -191,13 +288,17 @@ CREATE TABLE `icis_resident` (
   `signature` varchar(255) DEFAULT NULL COMMENT '业主个性签名',
   `pay_passcode` varchar(255) DEFAULT NULL COMMENT '业主支付码',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的居民用户表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的居民用户表使用';
 
 -- ----------------------------
 -- Records of icis_resident
 -- ----------------------------
 BEGIN;
-INSERT INTO `icis_resident` VALUES (1, 'sam199510', '123456', 17826807759, NULL, '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/headPhoto/icis_resident/sam199510.png', '飞向一九九五', '西和公寓10#606', 2, '世间事本无难易，为之则易！', '123456');
+INSERT INTO `icis_resident` VALUES (1, 'sam199510', '123456', 17826807759, '男', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/headPhoto/icis_resident/sam199510.png', '飞向一九九五', '西和公寓10#606', 2, '世间事本无难易，为之则易！', '123456');
+INSERT INTO `icis_resident` VALUES (2, 'james198510', '123456', 17829023402, '男', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/headPhoto/icis_resident/sam199510.png', 'james', '10504', 2, '放暑假啊放假啊水电费就爱上； ', '111111');
+INSERT INTO `icis_resident` VALUES (3, 'jack198808', '112233', 178321312213, '男', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/headPhoto/icis_resident/sam199510.png', 'jack', '10509', 2, '见风使舵的房间啊', '112222');
+INSERT INTO `icis_resident` VALUES (4, 'fox197808', '122333', 13804329923, '女', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/headPhoto/icis_resident/sam199510.png', 'fox', '9608', 2, '发生的发生', NULL);
+INSERT INTO `icis_resident` VALUES (5, 'marry198711', '332211', 139342132131, '女', '/Users/fei/Documents/Workspace/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/headPhoto/icis_resident/sam199510.png', 'marry', '7509', 2, NULL, NULL);
 COMMIT;
 
 -- ----------------------------
@@ -211,7 +312,7 @@ CREATE TABLE `icis_sign_in` (
   `sign_in_or_id` bigint(20) DEFAULT NULL COMMENT '签到者id',
   `sign_in_activity` varchar(50) DEFAULT NULL COMMENT '签到活动',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的用户活动签到表使用';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的用户活动签到表使用';
 
 -- ----------------------------
 -- Table structure for icis_worker
