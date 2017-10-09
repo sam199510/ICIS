@@ -192,6 +192,7 @@ public class IcisDynamicController {
         for (IcisDynamic icisDynamic: icisDynamics) {
             //建立一个朋友圈动态的单元模型
             com.icis.backend.model.IcisDynamic icisDynamicItem = new com.icis.backend.model.IcisDynamic();
+            icisDynamicItem.setDynamicId(icisDynamic.getId());
             //获取发布朋友圈动态的用户的昵称
             Long creatorId = icisDynamic.getCreatorId();
             String creatorNickname = this.icisResidentServiceI.selectByPrimaryKey(creatorId).getNickname();

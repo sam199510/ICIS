@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 public class IcisDynamic {
+    private Long dynamicId;
+
     private String dynamicCreatorNickname;
 
     private Date dynamicPublishTime;
@@ -82,5 +84,13 @@ public class IcisDynamic {
 
     public void setDynamicUserHeadPhoto(String dynamicUserHeadPhoto) {
         this.dynamicUserHeadPhoto = dynamicUserHeadPhoto;
+    }
+
+    public Long getDynamicId() {
+        return dynamicId;
+    }
+
+    public void setDynamicId(Long dynamicId) {
+        this.dynamicId = dynamicId;
     }
 }
