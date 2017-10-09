@@ -6,79 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2808e1ec-45e6-4ed9-a901-a81380e61853" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisAppointmentRecord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisActivityController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisActivityController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisAppointmentRecordController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisAppointmentRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisDynamicController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisDynamicController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisFeedbackController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisFeedbackController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisNotificationController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisNotificationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisRepairsController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisRepairsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisResidentController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisResidentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisAppointmentRecordMapper.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisAppointmentRecordMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisResidentMapper.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisResidentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisWorkerMapper.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisWorkerMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisAppointmentRecordServiceI.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisAppointmentRecordServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisNotificationServiceI.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisNotificationServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisResidentServiceI.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisResidentServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisWorkerServiceI.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisWorkerServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisAppointmentRecordServiceImpl.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisAppointmentRecordServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisNotificationServiceImpl.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisNotificationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisResidentServiceImpl.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisResidentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisWorkerServiceImpl.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisWorkerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisActivityController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisActivityController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisAppointmentRecordController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisAppointmentRecordController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisDynamicController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisDynamicController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisFeedbackController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisFeedbackController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisNotificationController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisNotificationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisRepairsController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisRepairsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisResidentController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisResidentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisAppointmentRecordMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisAppointmentRecordMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisResidentMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisResidentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisWorkerMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisWorkerMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisAppointmentRecordServiceI.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisAppointmentRecordServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisNotificationServiceI.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisNotificationServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisResidentServiceI.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisResidentServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisWorkerServiceI.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisWorkerServiceI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisAppointmentRecordServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisAppointmentRecordServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisNotificationServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisNotificationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisResidentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisResidentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisWorkerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisWorkerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisAppointmentRecordController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisAppointmentRecordController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisDynamicController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisDynamicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisFeedbackController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisFeedbackController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisNotificationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisNotificationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisRepairsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisRepairsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisResidentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisResidentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisAppointmentRecordMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisAppointmentRecordMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisResidentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisResidentMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisWorkerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisWorkerMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisAppointmentRecordServiceI.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisAppointmentRecordServiceI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisNotificationServiceI.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisNotificationServiceI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisResidentServiceI.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisResidentServiceI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisWorkerServiceI.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisWorkerServiceI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisAppointmentRecordServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisAppointmentRecordServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisNotificationServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisNotificationServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisResidentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisResidentServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisWorkerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisWorkerServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisResidentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisResidentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisWorkerMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisWorkerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/frontend/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/frontend/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisAppointmentRecordMapper.xml" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisAppointmentRecordMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisDynamicMapper.xml" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisDynamicMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisResidentMapper.xml" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisResidentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisWorkerMapper.xml" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisWorkerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/frontend/index.html" afterPath="$PROJECT_DIR$/target/ICIS/frontend/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/IcisAppointmentRecordMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/IcisAppointmentRecordMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/IcisDynamicMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/IcisDynamicMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/IcisResidentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/IcisResidentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/IcisWorkerMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/IcisWorkerMapper.xml" />
-    </list>
+    <list default="true" id="2808e1ec-45e6-4ed9-a901-a81380e61853" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,11 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisNotificationController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IcisNotificationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisNotificationController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
               <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="306" column="29" lean-forward="true" selection-start-line="306" selection-start-column="29" selection-end-line="306" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -631,16 +569,15 @@
       <workItem from="1507294683209" duration="440000" />
       <workItem from="1507364825341" duration="100000" />
       <workItem from="1507523887150" duration="51000" />
-      <workItem from="1507528256756" duration="3681000" />
+      <workItem from="1507528256756" duration="4961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5864000" />
+    <option name="totallyTimeSpent" value="7144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="22" width="1404" height="878" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -661,7 +598,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21455939" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21455939" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -835,13 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="111" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="284" column="18" lean-forward="false" selection-start-line="284" selection-start-column="21" selection-end-line="292" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1238,6 +1168,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="306" column="29" lean-forward="true" selection-start-line="306" selection-start-column="29" selection-end-line="306" selection-end-column="29" />
           <folding />
         </state>
       </provider>
