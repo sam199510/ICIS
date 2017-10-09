@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 06/10/2017 19:58:59
+ Date: 09/10/2017 17:04:04
 */
 
 SET NAMES utf8mb4;
@@ -90,7 +90,16 @@ CREATE TABLE `icis_appointment_record` (
   `create_time` datetime DEFAULT NULL COMMENT '预约开始时间',
   `final_time` datetime DEFAULT NULL COMMENT '预约结束时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的预约记录表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的预约记录表使用';
+
+-- ----------------------------
+-- Records of icis_appointment_record
+-- ----------------------------
+BEGIN;
+INSERT INTO `icis_appointment_record` VALUES (1, NULL, '一键预约，等待上门解决！', 10, '社区委员会', 1, 1, 0, NULL, NULL, '2017-10-09 14:35:31', NULL);
+INSERT INTO `icis_appointment_record` VALUES (2, NULL, '一键预约，等待上门解决！', 11, '社区委员会', 1, 1, 0, NULL, NULL, '2017-10-09 14:35:35', NULL);
+INSERT INTO `icis_appointment_record` VALUES (3, NULL, '一键预约，等待上门解决！', 12, '社区委员会', 1, 3, 0, NULL, NULL, '2017-10-09 14:43:40', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for icis_contacts
@@ -348,9 +357,9 @@ INSERT INTO `icis_worker` VALUES (6, 'zay', 'zay', '张阿姨', '2017-09-25', '2
 INSERT INTO `icis_worker` VALUES (7, 'lsf', 'lsf', '李师傅', '2017-09-25', '2017-09-25', '2017-09-26', 15012365214, 632569856, '1', NULL, '运送人员', 0);
 INSERT INTO `icis_worker` VALUES (8, 'way', 'way', '王阿姨', '2017-09-25', '2017-09-25', '2017-09-25', 13623541236, 203652145, '0', NULL, '保姆', 0);
 INSERT INTO `icis_worker` VALUES (9, 'zsf', 'zsf', '赵师傅', '2017-09-10', '2017-09-18', '2017-09-26', 15636252354, 6523632563, '1', NULL, '管道维修工', 0);
-INSERT INTO `icis_worker` VALUES (10, 'qg', 'qg', '钱工', '2017-09-26', '2017-09-26', '2017-09-26', 13789098988, 3243243242, '1', NULL, '杂工', 0);
-INSERT INTO `icis_worker` VALUES (11, 'sg', 'sg', '孙工', '2017-09-26', '2017-09-26', '2017-09-26', 13583848848, 283832883, '1', NULL, '杂工', 0);
-INSERT INTO `icis_worker` VALUES (12, 'hg', 'hg', '何工', '2017-09-26', '2017-09-26', '2017-09-28', 13873838382, 23302943, '0', NULL, '杂工', 0);
+INSERT INTO `icis_worker` VALUES (10, 'qg', 'qg', '钱工', '2017-09-26', '2017-09-26', '2017-09-26', 13789098988, 3243243242, '1', NULL, '杂工', 1);
+INSERT INTO `icis_worker` VALUES (11, 'sg', 'sg', '孙工', '2017-09-26', '2017-09-26', '2017-09-26', 13583848848, 283832883, '1', NULL, '杂工', 1);
+INSERT INTO `icis_worker` VALUES (12, 'hg', 'hg', '何工', '2017-09-26', '2017-09-26', '2017-09-28', 13873838382, 23302943, '0', NULL, '杂工', 1);
 INSERT INTO `icis_worker` VALUES (13, 'lg', 'lg', '吕工', '2017-09-26', '2017-09-26', '2017-09-26', 17874274212, 12343213, '1', NULL, '杂工', 0);
 INSERT INTO `icis_worker` VALUES (14, 'sg', 'sg', '苏工', '2017-09-26', '2017-09-26', '2017-09-27', 15683121221, 142131221, '1', NULL, '杂工', 0);
 INSERT INTO `icis_worker` VALUES (15, 'cg', 'cg', '曹工', '2017-09-26', '2017-09-26', '2017-09-26', 1503294893, 43243232, '1', NULL, '杂工', 0);
