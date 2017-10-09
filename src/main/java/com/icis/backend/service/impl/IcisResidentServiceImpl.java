@@ -53,4 +53,9 @@ public class IcisResidentServiceImpl implements IcisResidentServiceI {
     public IcisResident selectIcisResidentByUsername(String username) {
         return this.icisResidentMapper.selectIcisResidentByUsername(username);
     }
+
+    @Override
+    public IcisResident selectIcisResidentByIcisResidentId(Long id) {
+        return this.icisResidentMapper.selectIcisResidentByIcisResidentId(id);
+    }
 }

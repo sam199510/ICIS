@@ -212,4 +212,9 @@
     WHERE username = #{username,jdbcType=VARCHAR}
          AND password = #{password,jdbcType=VARCHAR}
   </select>
+  <select id="selectIcisWorkerByIcisWorkerId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_worker
+    WHERE id = #{id,jdbcType=BIGINT}
+  </select>
 </mapper>

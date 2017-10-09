@@ -55,4 +55,21 @@ public class IcisNotificationController {
             return "发布通知失败";
         }
     }
+
+    /**
+     * 通知修改
+     * 请求类型：POST
+     * 请求：/icisNotification/modifyNotification.html
+     * @param icisNotification
+     * @return 通知修改是否成功
+     */
+    @RequestMapping(value = "modifyNotification", method = RequestMethod.POST)
+    @ResponseBody
+    public String modifyNotification(IcisNotification icisNotification) {
+        if (this.icisNotificationServiceI.modifyNotification(icisNotification) == 0) {
+            return "修改通知失败";
+        } else {
+            return "修改通知成功";
+        }
+    }
 }

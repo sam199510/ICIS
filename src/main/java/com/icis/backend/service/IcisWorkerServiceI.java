@@ -55,4 +55,6 @@ public interface IcisWorkerServiceI {
      * @return 用户对象
      */
     public List<IcisWorker> selectWorkerByUsernameAndPassword(IcisWorker icisWorker);
+
+    public IcisWorker selectIcisWorkerByIcisWorkerId(Long id);
 }

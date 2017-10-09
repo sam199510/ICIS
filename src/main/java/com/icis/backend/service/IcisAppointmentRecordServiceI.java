@@ -3,6 +3,8 @@ package com.icis.backend.service;
 import com.icis.backend.entity.IcisAppointmentRecord;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface IcisAppointmentRecordServiceI {
     /**
@@ -39,4 +41,17 @@ public interface IcisAppointmentRecordServiceI {
      * @return 评价订单结果
      */
     public int commentAppointment(IcisAppointmentRecord icisAppointmentRecord);
+
+    /**
+     * 获取所有预约记录
+     * @return 预约记录列表
+     */
+    List<IcisAppointmentRecord> selectAllAppointmentRecord();
+
+    /**
+     * 获取我的预约记录
+     * @param residentId
+     * @return 我的预约记录列表
+     */
+    List<IcisAppointmentRecord> selectMyAppointmentRecord(Long residentId);
 }

@@ -19,4 +19,11 @@ public interface IcisNotificationServiceI {
      * @return 发布通知是否成功
      */
     public int publishNotification(IcisNotification icisNotification);
+
+    /**
+     * 修改通知
+     * @param icisNotification
+     * @return 修改通知是否成功
+     */
+    public int modifyNotification(IcisNotification icisNotification);
 }

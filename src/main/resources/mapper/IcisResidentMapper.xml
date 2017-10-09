@@ -181,4 +181,9 @@
     FROM icis_resident
     WHERE username = #{username,jdbcType=VARCHAR}
   </select>
+  <select id="selectIcisResidentByIcisResidentId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_resident
+    WHERE id = #{id,jdbcType=BIGINT}
+  </select>
 </mapper>

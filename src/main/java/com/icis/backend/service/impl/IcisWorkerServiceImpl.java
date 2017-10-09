@@ -53,4 +53,9 @@ public class IcisWorkerServiceImpl implements IcisWorkerServiceI {
     public List<IcisWorker> selectWorkerByUsernameAndPassword(IcisWorker icisWorker) {
         return this.icisWorkerMapper.selectWorkerByUsernameAndPassword(icisWorker);
     }
+
+    @Override
+    public IcisWorker selectIcisWorkerByIcisWorkerId(Long id) {
+        return this.icisWorkerMapper.selectIcisWorkerByIcisWorkerId(id);
+    }
 }

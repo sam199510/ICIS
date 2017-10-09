@@ -28,4 +28,6 @@ public interface IcisWorkerMapper {
     List<IcisWorker> isExistIcisWorker(IcisWorker icisWorker);
 
     List<IcisWorker> selectWorkerByUsernameAndPassword(IcisWorker icisWorker);
+
+    IcisWorker selectIcisWorkerByIcisWorkerId(Long id);
 }

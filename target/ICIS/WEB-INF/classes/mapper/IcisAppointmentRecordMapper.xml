@@ -186,4 +186,13 @@
         service_comment = #{serviceComment,jdbcType=VARCHAR}
     WHERE id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="selectAllAppointmentRecord" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_appointment_record
+  </select>
+  <select id="selectMyAppointmentRecord" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_appointment_record
+    WHERE resident_id = #{residentId,jdbcType=BIGINT}
+  </select>
 </mapper>

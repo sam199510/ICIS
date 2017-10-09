@@ -95,8 +95,8 @@ public class IcisRepairsController {
     public List<IcisRepairs> selectMyIcisRepairs(Long residentId) throws Exception {
         List<IcisRepairs> icisRepairs = this.icisRepairsServiceI.selectMyIcisRepairs(residentId);
         //获取本机IP
-        String ipAddress = InetAddress.getLocalHost().getHostAddress();
-        String request = "http://" + ipAddress + ":8080/icisRepairs/getPhoto.html?filePath=";
+//        String ipAddress = InetAddress.getLocalHost().getHostAddress();
+        String request = "/icisRepairs/getPhoto.html?filePath=";
         for (IcisRepairs icisRepair:icisRepairs) {
             if (icisRepair.getPhoto1() == null) {
                 icisRepair.setPhoto1(null);

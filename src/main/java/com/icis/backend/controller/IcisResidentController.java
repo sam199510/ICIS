@@ -109,12 +109,12 @@ public class IcisResidentController {
     @ResponseBody
     public IcisResident login(IcisResident icisResident) throws Exception {
         IcisResident loginIcisResident = this.icisResidentServiceI.selectByUsernameAndPassword(icisResident).get(0);
-        String ipAddress = InetAddress.getLocalHost().getHostAddress();
+//        String ipAddress = InetAddress.getLocalHost().getHostAddress();
         //返回头像设置链接
         if (loginIcisResident.getHeadPhoto() == null) {
             loginIcisResident.setHeadPhoto(null);
         } else {
-            loginIcisResident.setHeadPhoto("http://" + ipAddress + ":8080/icisResident/getPhoto.html?filePath=" + loginIcisResident.getHeadPhoto());
+            loginIcisResident.setHeadPhoto("/icisResident/getPhoto.html?filePath=" + loginIcisResident.getHeadPhoto());
         }
         return loginIcisResident;
     }
@@ -198,9 +198,9 @@ public class IcisResidentController {
             IcisResident icisResidentGetHeadPhoto = this.icisResidentServiceI.selectByPrimaryKey(icisResident.getId());
             String headPhotoFilePath = icisResidentGetHeadPhoto.getHeadPhoto();
             //获取本机IP
-            String ipAddress = InetAddress.getLocalHost().getHostAddress();
+//            String ipAddress = InetAddress.getLocalHost().getHostAddress();
             //返回头像设置链接
-            return "http://" + ipAddress + ":8080/icisResident/getPhoto.html?filePath=" + headPhotoFilePath;
+            return "/icisResident/getPhoto.html?filePath=" + headPhotoFilePath;
         } catch (Exception e) {
             e.printStackTrace();
         }

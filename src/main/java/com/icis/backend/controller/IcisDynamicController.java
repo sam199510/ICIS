@@ -183,7 +183,7 @@ public class IcisDynamicController {
     @ResponseBody
     public List<com.icis.backend.model.IcisDynamic> selectAllIcisDynamic() throws Exception {
         //获取本机IP
-        String ipAddress = InetAddress.getLocalHost().getHostAddress();
+//        String ipAddress = InetAddress.getLocalHost().getHostAddress();
         //建立一个朋友圈动态的数组模型
         List<com.icis.backend.model.IcisDynamic> icisDynamiModel = new ArrayList<com.icis.backend.model.IcisDynamic>();
         //从数据库中获取朋友圈动态的所有数据
@@ -203,7 +203,7 @@ public class IcisDynamicController {
             if (dynamicUserHeadPhoto == null) {
                 icisDynamicItem.setDynamicUserHeadPhoto(null);
             } else {
-                icisDynamicItem.setDynamicUserHeadPhoto("http://" + ipAddress + ":8080/icisDynamic/getPhoto.html?filePath=" + dynamicUserHeadPhoto);
+                icisDynamicItem.setDynamicUserHeadPhoto("/icisDynamic/getPhoto.html?filePath=" + dynamicUserHeadPhoto);
             }
             //获取朋友圈动态的内容
             icisDynamicItem.setDynamicPublishContent(icisDynamic.getPublishContent());
@@ -213,7 +213,7 @@ public class IcisDynamicController {
             if (icisDynamic.getPublishPhoto() == null) {
                 icisDynamicItem.setDynamicPublishPhoto(null);
             } else {
-                icisDynamicItem.setDynamicPublishPhoto("http://" + ipAddress + ":8080/icisDynamic/getPhoto.html?filePath=" + icisDynamic.getPublishPhoto());
+                icisDynamicItem.setDynamicPublishPhoto("/icisDynamic/getPhoto.html?filePath=" + icisDynamic.getPublishPhoto());
             }
             //建立一个点赞的数组模型
             List<com.icis.backend.model.IcisDynamicSupport> icisDynamicSupportModel = new ArrayList<com.icis.backend.model.IcisDynamicSupport>();

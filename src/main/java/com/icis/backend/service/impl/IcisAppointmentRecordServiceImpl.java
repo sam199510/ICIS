@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @Transactional
@@ -41,5 +42,15 @@ public class IcisAppointmentRecordServiceImpl implements IcisAppointmentRecordSe
     @Override
     public int commentAppointment(IcisAppointmentRecord icisAppointmentRecord) {
         return this.icisAppointmentRecordMapper.commentAppointment(icisAppointmentRecord);
+    }
+
+    @Override
+    public List<IcisAppointmentRecord> selectAllAppointmentRecord() {
+        return this.icisAppointmentRecordMapper.selectAllAppointmentRecord();
+    }
+
+    @Override
+    public List<IcisAppointmentRecord> selectMyAppointmentRecord(Long residentId) {
+        return this.icisAppointmentRecordMapper.selectMyAppointmentRecord(residentId);
     }
 }

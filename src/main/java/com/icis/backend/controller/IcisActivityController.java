@@ -47,13 +47,13 @@ public class IcisActivityController {
     @ResponseBody
     public List<IcisActivity> seleceAllIcisActivity() throws Exception {
         //获取本机IP
-        String ipAddress = InetAddress.getLocalHost().getHostAddress();
+//        String ipAddress = InetAddress.getLocalHost().getHostAddress();
         List<IcisActivity> icisActivities = this.icisActivityServiceI.seleceAllIcisActivity();
         for (IcisActivity icisActivity : icisActivities) {
             if (icisActivity.getImage() == null) {
                 icisActivity.setImage(null);
             } else {
-                icisActivity.setImage("http://" + ipAddress + ":8080/icisActivity/getPhoto.html?filePath=" + icisActivity.getImage());
+                icisActivity.setImage("/icisActivity/getPhoto.html?filePath=" + icisActivity.getImage());
             }
         }
         return icisActivities;

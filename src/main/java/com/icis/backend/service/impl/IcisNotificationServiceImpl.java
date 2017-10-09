@@ -28,4 +28,9 @@ public class IcisNotificationServiceImpl implements IcisNotificationServiceI {
     public int publishNotification(IcisNotification icisNotification) {
         return this.icisNotificationMapper.insert(icisNotification);
     }
+
+    @Override
+    public int modifyNotification(IcisNotification icisNotification) {
+        return this.icisNotificationMapper.updateByPrimaryKeySelective(icisNotification);
+    }
 }

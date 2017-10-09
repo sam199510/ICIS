@@ -89,8 +89,8 @@ public class IcisFeedbackController {
         List<IcisFeedback> icisFeedbacks = this.icisFeedbackServiceI.selectAllFeedbackRecord();
         try {
             //获取本机IP
-            String ipAddress = InetAddress.getLocalHost().getHostAddress();
-            String request = "http://" + ipAddress + ":8080/icisFeedback/getPhoto.html?filePath=";
+//            String ipAddress = InetAddress.getLocalHost().getHostAddress();
+            String request = "/icisFeedback/getPhoto.html?filePath=";
             //训话遍历列表
             for (IcisFeedback icisFeedback: icisFeedbacks) {
                 //设置各种属性

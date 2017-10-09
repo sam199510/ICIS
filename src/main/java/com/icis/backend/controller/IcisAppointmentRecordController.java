@@ -3,9 +3,11 @@ package com.icis.backend.controller;
 import com.alibaba.fastjson.JSON;
 import com.icis.backend.entity.IcisAppointmentItem;
 import com.icis.backend.entity.IcisAppointmentRecord;
+import com.icis.backend.entity.IcisResident;
 import com.icis.backend.entity.IcisWorker;
 import com.icis.backend.service.IcisAppointmentItemServiceI;
 import com.icis.backend.service.IcisAppointmentRecordServiceI;
+import com.icis.backend.service.IcisResidentServiceI;
 import com.icis.backend.service.IcisWorkerServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +16,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/icisAppointmentRecord")
@@ -53,6 +59,16 @@ public class IcisAppointmentRecordController {
 
     public void setIcisWorkerServiceI(IcisWorkerServiceI icisWorkerServiceI) {
         this.icisWorkerServiceI = icisWorkerServiceI;
+    }
+
+    /**
+     * 将IcisResidentService接口自动注入
+     */
+    @Autowired
+    private IcisResidentServiceI icisResidentServiceI;
+
+    public void setIcisResidentServiceI(IcisResidentServiceI icisResidentServiceI) {
+        this.icisResidentServiceI = icisResidentServiceI;
     }
 
     /**
@@ -189,6 +205,136 @@ public class IcisAppointmentRecordController {
             return "预约评价成功";
         } else {
             return "预约评价失败";
+        }
+    }
+
+    /**
+     * 获取所有预约项目
+     * 请求：/icisAppointmentRecord/selectAllIcisAppointmentRecord.html
+     * 请求类型：POST
+     * @return 预约项目列表
+     */
+    @RequestMapping(value = "selectAllIcisAppointmentRecord", method = RequestMethod.POST)
+    @ResponseBody
+    public List<com.icis.backend.model.IcisAppointmentRecord> selectAllIcisAppointmentRecord() {
+        List<com.icis.backend.model.IcisAppointmentRecord> icisAppointmentRecordModel = new ArrayList<com.icis.backend.model.IcisAppointmentRecord>();
+        List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectAllAppointmentRecord();
+        for (IcisAppointmentRecord icisAppointmentRecord:icisAppointmentRecords) {
+            com.icis.backend.model.IcisAppointmentRecord icisAppointmentRecordItem = new com.icis.backend.model.IcisAppointmentRecord();
+            icisAppointmentRecordItem.setId(icisAppointmentRecord.getId());
+            icisAppointmentRecordItem.setCompany(icisAppointmentRecord.getCompany());
+            icisAppointmentRecordItem.setCreateTime(icisAppointmentRecord.getCreateTime());
+            icisAppointmentRecordItem.setFinalTime(icisAppointmentRecord.getFinalTime());
+            icisAppointmentRecordItem.setIsApproved(icisAppointmentRecord.getIsApproved());
+            icisAppointmentRecordItem.setIsCompleted(icisAppointmentRecord.getIsCompleted());
+            icisAppointmentRecordItem.setResidentId(icisAppointmentRecord.getResidentId());
+            icisAppointmentRecordItem.setServiceComment(icisAppointmentRecord.getServiceComment());
+            icisAppointmentRecordItem.setServiceContent(icisAppointmentRecord.getServiceContent());
+            icisAppointmentRecordItem.setServiceGrade(icisAppointmentRecord.getServiceGrade());
+            icisAppointmentRecordItem.setWorkerId(icisAppointmentRecord.getWorkerId());
+            icisAppointmentRecordItem.setServicePhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisAppointmentRecord.getServicePhoto());
+
+            IcisResident icisResident = this.icisResidentServiceI.selectIcisResidentByIcisResidentId(icisAppointmentRecord.getResidentId());
+            if (icisResident.getHeadPhoto() == null) {
+                icisResident.setHeadPhoto(null);
+            } else {
+                icisResident.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisResident.getHeadPhoto());
+            }
+            icisAppointmentRecordItem.setIcisResident(icisResident);
+
+            IcisWorker icisWorker = this.icisWorkerServiceI.selectIcisWorkerByIcisWorkerId(icisAppointmentRecord.getWorkerId());
+            if (icisWorker.getHeadPhoto() == null) {
+                icisWorker.setHeadPhoto(null);
+            } else {
+                icisWorker.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisWorker.getHeadPhoto());
+            }
+            icisAppointmentRecordItem.setIcisWorker(icisWorker);
+            icisAppointmentRecordModel.add(icisAppointmentRecordItem);
+        }
+        return icisAppointmentRecordModel;
+    }
+
+    /**
+     * 获取我的预约项目
+     * 请求：/icisAppointmentRecord/selectAllIcisAppointmentRecord.html
+     * 请求类型：POST
+     * @param id
+     * @return 我的预约列表
+     */
+    @RequestMapping(value = "selectMyIcisAppointmentRecord", method = RequestMethod.POST)
+    @ResponseBody
+    public List<com.icis.backend.model.IcisAppointmentRecord> selectMyIcisAppointmentRecord(Long id) {
+        List<com.icis.backend.model.IcisAppointmentRecord> icisAppointmentRecordModel = new ArrayList<com.icis.backend.model.IcisAppointmentRecord>();
+        List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectMyAppointmentRecord(id);
+        for (IcisAppointmentRecord icisAppointmentRecord:icisAppointmentRecords) {
+            com.icis.backend.model.IcisAppointmentRecord icisAppointmentRecordItem = new com.icis.backend.model.IcisAppointmentRecord();
+            icisAppointmentRecordItem.setId(icisAppointmentRecord.getId());
+            icisAppointmentRecordItem.setCompany(icisAppointmentRecord.getCompany());
+            icisAppointmentRecordItem.setCreateTime(icisAppointmentRecord.getCreateTime());
+            icisAppointmentRecordItem.setFinalTime(icisAppointmentRecord.getFinalTime());
+            icisAppointmentRecordItem.setIsApproved(icisAppointmentRecord.getIsApproved());
+            icisAppointmentRecordItem.setIsCompleted(icisAppointmentRecord.getIsCompleted());
+            icisAppointmentRecordItem.setResidentId(icisAppointmentRecord.getResidentId());
+            icisAppointmentRecordItem.setServiceComment(icisAppointmentRecord.getServiceComment());
+            icisAppointmentRecordItem.setServiceContent(icisAppointmentRecord.getServiceContent());
+            icisAppointmentRecordItem.setServiceGrade(icisAppointmentRecord.getServiceGrade());
+            icisAppointmentRecordItem.setWorkerId(icisAppointmentRecord.getWorkerId());
+            icisAppointmentRecordItem.setServicePhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisAppointmentRecord.getServicePhoto());
+
+            IcisResident icisResident = this.icisResidentServiceI.selectIcisResidentByIcisResidentId(icisAppointmentRecord.getResidentId());
+            if (icisResident.getHeadPhoto() == null) {
+                icisResident.setHeadPhoto(null);
+            } else {
+                icisResident.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisResident.getHeadPhoto());
+            }
+            icisAppointmentRecordItem.setIcisResident(icisResident);
+
+            IcisWorker icisWorker = this.icisWorkerServiceI.selectIcisWorkerByIcisWorkerId(icisAppointmentRecord.getWorkerId());
+            if (icisWorker.getHeadPhoto() == null) {
+                icisWorker.setHeadPhoto(null);
+            } else {
+                icisWorker.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisWorker.getHeadPhoto());
+            }
+            icisAppointmentRecordItem.setIcisWorker(icisWorker);
+            icisAppointmentRecordModel.add(icisAppointmentRecordItem);
+        }
+        return icisAppointmentRecordModel;
+    }
+
+    /**
+     * 头像设置链接显示头像
+     * 请求类型：GET
+     * 请求：/icisResident/getPhoto.html
+     * @param response
+     * @param filePath
+     * @throws Exception
+     */
+    @RequestMapping(value = "getPhoto", method = RequestMethod.GET)
+    public void getPhoto(HttpServletResponse response, String filePath) throws Exception {
+        OutputStream outputStream = response.getOutputStream();
+        File file = new File(filePath);
+        FileInputStream fips = new FileInputStream(file);
+        byte[] byImg = readStream(fips);
+        outputStream.write(byImg);
+        outputStream.flush();
+    }
+
+    /**
+     * 以流形式返回用户头像
+     * @param inputStream
+     * @return 流形式返回用户头像
+     */
+    public byte[] readStream(InputStream inputStream){
+        ByteArrayOutputStream bops = new ByteArrayOutputStream();
+        int data = -1;
+        try {
+            while ((data = inputStream.read()) != -1) {
+                bops.write(data);
+            }
+            return bops.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

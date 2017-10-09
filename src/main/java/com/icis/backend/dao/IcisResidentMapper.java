@@ -27,4 +27,6 @@ public interface IcisResidentMapper {
 
     IcisResident selectIcisResidentByUsername(String username);
 
+    IcisResident selectIcisResidentByIcisResidentId(Long id);
+
 }

@@ -49,4 +49,6 @@ public interface IcisResidentServiceI {
     public IcisResident selectByPrimaryKey(Long id);
 
     public IcisResident selectIcisResidentByUsername(String username);
+
+    public IcisResident selectIcisResidentByIcisResidentId(Long id);
 }
