@@ -22,4 +22,6 @@ public interface IcisDynamicSupportServiceI {
     public int unsupportDynamic(IcisDynamicSupport icisDynamicSupport);
 
     public List<IcisDynamicSupport> selectSupportorByDynamicId(Long dynamicId);
+
+    public List<IcisDynamicSupport> selectIsSupport(IcisDynamicSupport icisDynamicSupport);
 }

@@ -33,4 +33,9 @@ public class IcisDynamicSupportServiceImpl implements IcisDynamicSupportServiceI
     public List<IcisDynamicSupport> selectSupportorByDynamicId(Long dynamicId) {
         return this.icisDynamicSupportMapper.selectSupportorByDynamicId(dynamicId);
     }
+
+    @Override
+    public List<IcisDynamicSupport> selectIsSupport(IcisDynamicSupport icisDynamicSupport) {
+        return this.icisDynamicSupportMapper.selectIsSupport(icisDynamicSupport);
+    }
 }

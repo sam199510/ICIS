@@ -22,4 +22,6 @@ public interface IcisDynamicSupportMapper {
     int unsupportDynamic(IcisDynamicSupport icisDynamicSupport);
 
     List<IcisDynamicSupport> selectSupportorByDynamicId(Long dynamicId);
+
+    List<IcisDynamicSupport> selectIsSupport(IcisDynamicSupport icisDynamicSupport);
 }

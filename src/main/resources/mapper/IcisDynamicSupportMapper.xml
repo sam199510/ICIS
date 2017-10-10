@@ -89,4 +89,10 @@
     FROM icis_dynamic_support
     WHERE dynamic_id = #{dynamicId,jdbcType=BIGINT}
   </select>
+  <select id="selectIsSupport" parameterType="com.icis.backend.entity.IcisDynamicSupport" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_dynamic_support
+    WHERE dynamic_id = #{dynamicId,jdbcType=BIGINT}
+          AND supportor_id = #{supportorId,jdbcType=BIGINT}
+  </select>
 </mapper>

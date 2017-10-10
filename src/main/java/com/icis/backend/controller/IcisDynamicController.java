@@ -271,6 +271,29 @@ public class IcisDynamicController {
     }
 
     /**
+     * 判断是否点赞
+     * 请求：/icisDynamic/selectIsSupport.html
+     * 请求类型：POST
+     * @param icisDynamicSupport
+     *        需要传入的参数有：
+     *        dynamicId（动态id）
+     *        supportorId（点赞者id）
+     * @return 是否已点赞
+     *         是返回"已点赞"
+     *         否返回"未点赞"
+     */
+    @RequestMapping(value = "selectIsSupport", method = RequestMethod.POST)
+    @ResponseBody
+    public String selectIsSupport(IcisDynamicSupport icisDynamicSupport) {
+        int selectIsSupportState = this.icisDynamicSupportServiceI.selectIsSupport(icisDynamicSupport).size();
+        if (selectIsSupportState == 0) {
+            return "未点赞";
+        } else {
+            return "已点赞";
+        }
+    }
+
+    /**
      * 设置链接显示朋友圈图片
      * 请求类型：GET
      * 请求：/icisResident/getPhoto.html
