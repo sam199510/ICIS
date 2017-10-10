@@ -53,7 +53,19 @@ public class IcisResidentController {
      * 请求：/icisResident/addIcisResident.html
      * 请求类型：POST
      * @param icisResident
+     *        需要传入的参数有用户的信息
+     *        username（用户名）
+     *        password（初始密码）
+     *        tel（电话）
+     *        sex（性别）
+     *        nickname（昵称）
+     *        address（住址）
+     *        liveAge（住龄）
+     *        signature（个性签名）
+     *        payPasscode（初始支付密码）
      * @Return 添加业主用户信息反馈
+     *         成功返回"添加业主成功"
+     *         失败返回"添加业主失败"
      */
     @RequestMapping(value = "addIcisResident", method = RequestMethod.POST)
     @ResponseBody
@@ -78,7 +90,11 @@ public class IcisResidentController {
      * 请求：/icisResident/loginCheck.html
      * 请求类型：POST
      * @param icisResident
+     *        需要传入的参数有
+     *        username（用户名）
+     *        password（密码）
      * @return 登录反馈
+     *         参看如下代码
      */
     @RequestMapping(value = "loginCheck", method = RequestMethod.POST)
     @ResponseBody
@@ -103,6 +119,9 @@ public class IcisResidentController {
      * 请求：/icisResident/login.html
      * 请求类型：POST
      * @param icisResident
+     *        需要传入的参数有
+     *        username（用户名）
+     *        password（密码）
      * @return 登录的用户对象
      */
     @RequestMapping(value = "login", method = RequestMethod.POST)
@@ -124,7 +143,10 @@ public class IcisResidentController {
      * 请求：/icisResident/updateUserInfo.html
      * 请求类型：POST
      * @param icisResident
+     *        传入的参数同新增用户
      * @return 更新是否成功
+     *         成功返回"修改成功"
+     *         失败返回"修改失败"
      */
     @RequestMapping(value = "updateUserInfo", method = RequestMethod.POST)
     @ResponseBody
@@ -143,8 +165,12 @@ public class IcisResidentController {
      * 请求：/icisResident/uploadHeadPhoto.html
      * 请求类型：POST
      * @param file
+     *        此file为头像图片
      * @param icisResident
+     *        id（用户id）
      * @return 头像上传信息反馈
+     *         成功返回"上传成功"
+     *         失败返回"上传失败"
      */
     @RequestMapping(value = "uploadHeadPhoto", method = RequestMethod.POST)
     @ResponseBody
@@ -188,6 +214,7 @@ public class IcisResidentController {
      * 请求：/icisResident/getHeadPhoto.html
      * 请求类型：POST
      * @param icisResident
+     *        传入参数有用户id
      * @return 头像设置链接
      */
     @RequestMapping(value = "getHeadPhoto", method = RequestMethod.POST)
@@ -213,6 +240,7 @@ public class IcisResidentController {
      * 请求：/icisResident/getPhoto.html
      * @param response
      * @param filePath
+     *        此filePath为头像图片在服务器上的路径
      * @throws Exception
      */
     @RequestMapping(value = "getPhoto", method = RequestMethod.GET)

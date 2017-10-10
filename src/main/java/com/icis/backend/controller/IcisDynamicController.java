@@ -77,9 +77,16 @@ public class IcisDynamicController {
      * 请求：/icisDynamic/addIcisDynamic.html
      * 请求类型：POST
      * @param icisResidentId
+     *        此为用户id
      * @param icisDynamic
+     *        需要传入的参数有：
+     *        publishContent（发布的内容）
+     *        publishPosition（发布的位置）
      * @param file
+     *        此file为发布的图片的file
      * @return 发布动态是否成功
+     *         成功返回"发布动态成功"
+     *         失败返回"发布动态失败"
      */
     @RequestMapping(value = "addIcisDynamic", method = RequestMethod.POST)
     @ResponseBody
@@ -109,9 +116,11 @@ public class IcisDynamicController {
      * 点赞动态方法
      * 请求类型：POST
      * 请求：/icisDynamic/supportDynamic.html
-     * @param supportorId
-     * @param dynamicId
-     * @return
+     * @param supportorId 此为用户id
+     * @param dynamicId 此为朋友圈id
+     * @return 返回点赞是否成功
+     *         成功返回"点赞成功"
+     *         失败返回"点赞失败"
      */
     @RequestMapping(value = "supportDynamic", method = RequestMethod.POST)
     @ResponseBody
@@ -140,7 +149,12 @@ public class IcisDynamicController {
      * 请求：/icisDynamic/unsupportDynamic.html
      * 请求类型：POST
      * @param icisDynamicSupport
+     *        需要传入的参数有
+     *        dynamicId（朋友圈id）
+     *        supportorId（点赞者id）
      * @return 取消点赞是否成功
+     *         成功返回"取消点赞成功"
+     *         失败返回"取消点赞失败"
      */
     @RequestMapping(value = "unsupportDynamic", method = RequestMethod.POST)
     @ResponseBody
@@ -158,7 +172,13 @@ public class IcisDynamicController {
      * 请求类型：POST
      * 请求：/icisDynamic/unsupportDynamic.html
      * @param icisDynamicComment
+     *        需要传入的参数有
+     *        dynamicId（朋友圈id）
+     *        commentorId（评论者id）
+     *        content（评论内容）
      * @return 评论是否成功
+     *         成功返回"评论动态成功"
+     *         失败返回"评论动态失败"
      */
     @RequestMapping(value = "commentDynamic", method = RequestMethod.POST)
     @ResponseBody
@@ -251,11 +271,11 @@ public class IcisDynamicController {
     }
 
     /**
-     * 头像设置链接显示头像
+     * 设置链接显示朋友圈图片
      * 请求类型：GET
      * 请求：/icisResident/getPhoto.html
      * @param response
-     * @param filePath
+     * @param filePath 此filePath为朋友圈图片路径
      * @throws Exception
      */
     @RequestMapping(value = "getPhoto", method = RequestMethod.GET)

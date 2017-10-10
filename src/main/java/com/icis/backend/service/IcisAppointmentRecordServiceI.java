@@ -46,12 +46,19 @@ public interface IcisAppointmentRecordServiceI {
      * 获取所有预约记录
      * @return 预约记录列表
      */
-    List<IcisAppointmentRecord> selectAllAppointmentRecord();
+    public List<IcisAppointmentRecord> selectAllAppointmentRecord();
 
     /**
      * 获取我的预约记录
      * @param residentId
      * @return 我的预约记录列表
      */
-    List<IcisAppointmentRecord> selectMyAppointmentRecord(Long residentId);
+    public List<IcisAppointmentRecord> selectMyAppointmentRecord(Long residentId);
+
+    /**
+     * 获取预约记录中的平均分
+     * @param icisAppointmentRecord
+     * @return 平均分
+     */
+    public List<IcisAppointmentRecord> selectAvgAppointmentGrade(IcisAppointmentRecord icisAppointmentRecord);
 }

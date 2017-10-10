@@ -35,7 +35,13 @@ public class IcisSignInController {
      * 请求类型：POST
      * 请求：/icisSignIn/signIn.html
      * @param icisSignIn
+     *        传入的参数有：
+     *        signInAddress（签到地址）
+     *        signInOrId（签到者id）
+     *        signInActivity（签到的活动）
      * @return 签到是否成功
+     *         成功返回"签到成功"
+     *         失败返回"签到失败"
      */
     @RequestMapping(value = "signIn", method = RequestMethod.POST)
     @ResponseBody

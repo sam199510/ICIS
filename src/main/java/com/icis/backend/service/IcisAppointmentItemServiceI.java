@@ -19,4 +19,18 @@ public interface IcisAppointmentItemServiceI {
      * @return 预约项目对象
      */
     public IcisAppointmentItem selectIcisAppointmentItemByPrimaryKey(Long id);
+
+    /**
+     * 预约评分重新设定
+     * @param record
+     * @return 预约评分计算是否成功
+     */
+    public int updateGrade(IcisAppointmentItem record);
+
+    /**
+     * 预约评分重新设定
+     * @param icisAppointmentItem
+     * @return 预约评分计算是否成功
+     */
+    public int updateAppointmentGrade(IcisAppointmentItem icisAppointmentItem);
 }

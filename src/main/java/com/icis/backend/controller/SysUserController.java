@@ -32,6 +32,9 @@ public class SysUserController {
     /**
      * 登录验证
      * @param sysUser
+     *        需要传入的参数有：
+     *        username（社区管理员用户名）
+     *        password（社区管理员密码）
      * @return 是否登录成功
      */
     @RequestMapping(value = "loginCheck", method = RequestMethod.POST)
@@ -55,6 +58,9 @@ public class SysUserController {
     /**
      * 登录获取用户对象
      * @param sysUser
+     *        需要传入的参数有：
+     *        username（社区管理员用户名）
+     *        password（社区管理员密码）
      * @return 对象
      */
     @RequestMapping(value = "login", method = RequestMethod.POST)

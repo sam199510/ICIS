@@ -48,6 +48,9 @@ public class IcisWorkerController {
      * 一键预约
      * 请求：/IcisWorker/oneBtnToAppointment.html
      * 请求类型：POST
+     * @param resident
+     *        需要传入的参数有：
+     *        id（社区居民id）
      * @return 一键预约的员工
      */
     @RequestMapping(value = "oneBtnToAppointment", method = RequestMethod.POST)
@@ -87,7 +90,11 @@ public class IcisWorkerController {
      * 请求：/icisWorker/loginCheck.html
      * 请求类型：POST
      * @param icisWorker
+     *        需要传入的参数有：
+     *        username（社工用户名）
+     *        password（社工密码）
      * @return 登录验证结果
+     *         返回结果参看如下代码
      */
     @RequestMapping(value = "loginCheck", method = RequestMethod.POST)
     @ResponseBody
@@ -112,6 +119,9 @@ public class IcisWorkerController {
      * 请求类型：POST
      * 请求：/icisWorker/login.html
      * @param icisWorker
+     *        需要传入的参数有：
+     *        username（社工用户名）
+     *        password（社工密码）
      * @return
      */
     @RequestMapping(value = "login", method = RequestMethod.POST)

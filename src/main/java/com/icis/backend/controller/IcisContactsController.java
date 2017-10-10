@@ -35,7 +35,18 @@ public class IcisContactsController {
      * 请求：/icisContacts/addContact.html
      * 请求类型：POST
      * @param icisContacts
+     *        其中传入参数包括：
+     *        name（联系人姓名）
+     *        telephone（联系人电话）
+     *        email（联系人邮箱）
+     *        headimg（联系人头像）
+     *        sex（性别）
+     *        account（ICIS账号）
+     *        address（住址）
+     *        noteinfomation（备注信息）
      * @return 添加联系人是否成功
+     *         成功返回"添加联系人成功"
+     *         失败返回"添加联系人失败"
      */
     @RequestMapping(value = "addContact", method = RequestMethod.POST)
     @ResponseBody
@@ -70,6 +81,7 @@ public class IcisContactsController {
      * 请求类型：POST
      * 请求：/icisContacts/deleteIcisContact.html
      * @param icisContacts
+     *        传入参数为：id（联系人id）
      * @return 联系人删除是否成功
      */
     @RequestMapping(value = "deleteIcisContact", method = RequestMethod.POST)
@@ -88,6 +100,7 @@ public class IcisContactsController {
      * 请求：/icisContacts/updateContact.html
      * 请求类型：POST
      * @param icisContacts
+     *        传入参数同添加联系人参数
      * @return 更新联系人信息是否成功
      */
     @RequestMapping(value = "updateContact", method = RequestMethod.POST)

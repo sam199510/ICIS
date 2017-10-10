@@ -22,4 +22,6 @@ public interface IcisAppointmentItemMapper {
     List<IcisAppointmentItem> selectAllIcisAppointmentItem();
 
     IcisAppointmentItem selectIcisAppointmentItemByPrimaryKey(Long id);
+
+    int updateAppointmentGrade(IcisAppointmentItem icisAppointmentItem);
 }

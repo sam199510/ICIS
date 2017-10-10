@@ -14,6 +14,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/icisNotification")
 public class IcisNotificationController {
+    /**
+     * 将IcisNotificationService接口自动注入
+     */
     @Autowired
     private IcisNotificationServiceI icisNotificationServiceI;
 
@@ -38,7 +41,13 @@ public class IcisNotificationController {
      * 请求：/icisNotification/publishNotification.html
      * 请求类型：POST
      * @param icisNotification
-     * @return
+     *        需要传入的参数有：
+     *        extent（通知紧急程度）
+     *        content（通知内容）
+     *        unit（发布通知的单位）
+     * @return 发布通知是否成功
+     *         成功返回"发布通知成功"
+     *         失败返回"发布通知失败"
      */
     @RequestMapping(value = "publishNotification", method = RequestMethod.POST)
     @ResponseBody
@@ -61,6 +70,7 @@ public class IcisNotificationController {
      * 请求类型：POST
      * 请求：/icisNotification/modifyNotification.html
      * @param icisNotification
+     *        需要传入的参数同发布通知
      * @return 通知修改是否成功
      */
     @RequestMapping(value = "modifyNotification", method = RequestMethod.POST)

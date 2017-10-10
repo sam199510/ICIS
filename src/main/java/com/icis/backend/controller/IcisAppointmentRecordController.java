@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -76,7 +77,11 @@ public class IcisAppointmentRecordController {
      * 请求：/icisAppointmentRecord/completeAppointment.html
      * 请求类型：POST
      * @param icisAppointmentRecord
-     * @return
+     *        其中需要传入的参数有：
+     *        id（预约记录id）
+     * @return 预约完成是否成功
+     *         成功返回"预约完成"
+     *         失败返回"预约完成失败"
      */
     @RequestMapping(value = "completeAppointment", method = RequestMethod.POST)
     @ResponseBody
@@ -113,14 +118,48 @@ public class IcisAppointmentRecordController {
      * 请求：/icisAppointmentRecord/commentAppointment.html
      * 请求类型：POST
      * @param icisAppointmentRecord
-     * @return
+     *        其中需要传入的参数有：
+     *        id（预约记录id）、workerId（社工id）、serviceGrade（等级评价）、serviceComment（评价文字内容）
+     * @return 评价是否完成
+     *         成功返回"评价成功"
+     *         失败返回"评价失败"
      */
     @RequestMapping(value = "commentAppointment", method = RequestMethod.POST)
     @ResponseBody
     public String commentAppointment(IcisAppointmentRecord icisAppointmentRecord){
         int commentState = this.icisAppointmentRecordServiceI.commentAppointment(icisAppointmentRecord);
         if (commentState == 1) {
-            return "评价成功";
+            //定义初始化总分
+            double sum = 0;
+            //定义初始化记录数
+            int n = 0;
+            icisAppointmentRecord.setIsCompleted(1);
+            //从数据库中读取预约记录列表
+            List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectAvgAppointmentGrade(icisAppointmentRecord);
+            //循环遍历预约记录列表
+            for (IcisAppointmentRecord icisAppointmentRecordItem : icisAppointmentRecords) {
+                //计算总分
+                sum += (double)icisAppointmentRecordItem.getServiceGrade();
+                //计算总记录数
+                n++;
+            }
+            //计算平均分
+            double ave = sum/n;
+            //格式化平均分
+            BigDecimal b = new BigDecimal(ave);
+            double average = b.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+            //建立新的预约项目对象
+            IcisAppointmentItem icisAppointmentItem = new IcisAppointmentItem();
+            icisAppointmentItem.setWorkerId(icisAppointmentRecord.getWorkerId());
+            icisAppointmentItem.setGrade(average);
+            //更新数据库评分
+            int updateGradeState = this.icisAppointmentItemServiceI.updateAppointmentGrade(icisAppointmentItem);
+            //判断数据库更新是否成功
+            if (updateGradeState == 0) {
+                return "评价成功，但更新评分失败";
+            } else {
+                return "评价成功，更新评分也成功";
+            }
         } else {
             return "评价失败";
         }
@@ -128,8 +167,8 @@ public class IcisAppointmentRecordController {
 
     /**
      * 预约指定项目
-     * @param icisResidentId
-     * @param icisAppointmentItemId
+     * @param icisResidentId 此参数是用户id
+     * @param icisAppointmentItemId 此参数是预约项目id
      * @return 预约是否成功
      */
     @RequestMapping(value = "selfAppointment", method = RequestMethod.POST)
@@ -164,8 +203,10 @@ public class IcisAppointmentRecordController {
 
     /**
      * 自我预约完成功能
-     * @param icisAppointmentRecordId
+     * @param icisAppointmentRecordId 此参数是预约id
      * @return 完成是否成功
+     *         成功返回"预约完成成功"
+     *         失败返回"预约完成失败"
      */
     @RequestMapping(value = "selfCompleteAppointment", method = RequestMethod.POST)
     @ResponseBody
@@ -195,16 +236,50 @@ public class IcisAppointmentRecordController {
     /**
      * 自我预约评价
      * @param icisAppointmentRecord
+     *        其中需要传入的参数有：
+     *        id（预约记录id）、workerId（社工id）、serviceGrade（等级评价）、serviceComment（评价文字内容）
      * @return 是否评价成功
+     *         成功返回"预约评价成功"
+     *         失败返回"预约评价失败"
      */
     @RequestMapping(value = "selfCommentAppointment", method = RequestMethod.POST)
     @ResponseBody
     public String selfCommentAppointment(IcisAppointmentRecord icisAppointmentRecord) {
         int commentState = this.icisAppointmentRecordServiceI.commentAppointment(icisAppointmentRecord);
         if (commentState == 0) {
-            return "预约评价成功";
-        } else {
             return "预约评价失败";
+        } else {
+            //定义初始化总分
+            double sum = 0;
+            //定义初始化记录数
+            int n = 0;
+            icisAppointmentRecord.setIsCompleted(1);
+            //从数据库中读取预约记录列表
+            List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectAvgAppointmentGrade(icisAppointmentRecord);
+            //循环遍历预约记录列表
+            for (IcisAppointmentRecord icisAppointmentRecordItem : icisAppointmentRecords) {
+                //计算总分
+                sum += (double)icisAppointmentRecordItem.getServiceGrade();
+                //计算总记录数
+                n++;
+            }
+            //计算平均分
+            double ave = sum/n;
+            //格式化平均分
+            BigDecimal b = new BigDecimal(ave);
+            double average = b.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+            //建立新的预约项目对象
+            IcisAppointmentItem icisAppointmentItem = new IcisAppointmentItem();
+            icisAppointmentItem.setWorkerId(icisAppointmentRecord.getWorkerId());
+            icisAppointmentItem.setGrade(average);
+            //更新数据库评分
+            int updateGradeState = this.icisAppointmentItemServiceI.updateAppointmentGrade(icisAppointmentItem);
+            //判断数据库更新是否成功
+            if (updateGradeState == 0) {
+                return "评价成功，但更新评分失败";
+            } else {
+                return "评价成功，更新评分也成功";
+            }
         }
     }
 
@@ -256,9 +331,9 @@ public class IcisAppointmentRecordController {
 
     /**
      * 获取我的预约项目
-     * 请求：/icisAppointmentRecord/selectAllIcisAppointmentRecord.html
+     * 请求：/icisAppointmentRecord/selectMyIcisAppointmentRecord.html
      * 请求类型：POST
-     * @param id
+     * @param id 此id为社区用户id
      * @return 我的预约列表
      */
     @RequestMapping(value = "selectMyIcisAppointmentRecord", method = RequestMethod.POST)
@@ -302,11 +377,12 @@ public class IcisAppointmentRecordController {
     }
 
     /**
-     * 头像设置链接显示头像
+     * 设置链接显示服务内容图片
      * 请求类型：GET
      * 请求：/icisResident/getPhoto.html
      * @param response
      * @param filePath
+     *        此filePath为图片目录
      * @throws Exception
      */
     @RequestMapping(value = "getPhoto", method = RequestMethod.GET)

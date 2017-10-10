@@ -49,8 +49,16 @@ public class IcisOrderController {
      * 请求：/icisOrder/addIcisOrder.html
      * 请求类型：POST
      * @param icisOrder
+     *        需要传入的参数有
+     *        price（价格）
+     *        content（内容）
+     *        payUnit（收费单位）
      * @param residentUsername
+     *        需要传入的参数有：
+     *        residentUsername（居民的用户名）
      * @return 增加订单是否成功
+     *         成功返回"新增订单成功"
+     *         失败返回"新增订单失败"
      */
     @RequestMapping(value = "addIcisOrder", method = RequestMethod.POST)
     @ResponseBody
@@ -82,6 +90,7 @@ public class IcisOrderController {
      * 请求：/icisOrder/selectIcisOrderByPayorId.html
      * 请求类型：POST
      * @param icisResidentId
+     *        此为支付者id，即用户id
      * @return 订单列表
      */
     @RequestMapping(value = "selectIcisOrderByPayorId", method = RequestMethod.POST)
@@ -93,7 +102,11 @@ public class IcisOrderController {
     /**
      * 完成订单
      * @param icisOrder
+     *        需要传入的参数有：
+     *        payStyle（支付方式）
      * @return 完成订单是否成功
+     *         成功返回"订单完成成功"
+     *         失败返回"订单完成失败"
      */
     @RequestMapping(value = "completeIcisOrder", method = RequestMethod.POST)
     @ResponseBody

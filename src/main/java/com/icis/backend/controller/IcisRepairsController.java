@@ -41,8 +41,15 @@ public class IcisRepairsController {
      * 请求：/icisRepairs/addIcisRepairsRecord.html
      * 请求类型
      * @param icisRepairs
+     *        需要传入的参数有：
+     *        address（地址）
+     *        content（报修内容）
+     *        residentId（报修者id）
      * @param files
+     *        此files为用户报修提供的图片组
      * @return 报修是否成功
+     *         成功返回"报修成功"
+     *         失败返回"报修失败"
      */
     @RequestMapping(value = "addIcisRepairsRecord", method = RequestMethod.POST)
     @ResponseBody
@@ -87,6 +94,7 @@ public class IcisRepairsController {
      * 请求类型：POST
      * 请求：/icisRepairs/selectMyIcisRepairs.html
      * @param residentId
+     *        此id为居民用户id
      * @return 用户报修列表
      * @throws Exception
      */
@@ -159,6 +167,17 @@ public class IcisRepairsController {
         }
     }
 
+    /**
+     * 完成保修
+     * 请求：/icisResident/completeRepairs.html
+     * 请求类型：POST
+     * @param icisRepairs
+     *        需要传入的参数有
+     *        id（报修id）
+     * @return 报修完成是否成功
+     *         成功返回"报修完成成功"
+     *         失败返回"报修完成失败"
+     */
     @RequestMapping(value = "completeRepairs", method = RequestMethod.POST)
     @ResponseBody
     public String completeRepairs(IcisRepairs icisRepairs) {

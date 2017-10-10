@@ -26,4 +26,6 @@ public interface IcisAppointmentRecordMapper {
     List<IcisAppointmentRecord> selectAllAppointmentRecord();
 
     List<IcisAppointmentRecord> selectMyAppointmentRecord(Long residentId);
+
+    List<IcisAppointmentRecord> selectAvgAppointmentGrade(IcisAppointmentRecord icisAppointmentRecord);
 }

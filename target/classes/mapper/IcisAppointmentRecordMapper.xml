@@ -195,4 +195,10 @@
     FROM icis_appointment_record
     WHERE resident_id = #{residentId,jdbcType=BIGINT}
   </select>
+  <select id="selectAvgAppointmentGrade" parameterType="com.icis.backend.entity.IcisAppointmentRecord" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_appointment_record
+    WHERE worker_id = #{workerId,jdbcType=BIGINT}
+          AND is_completed = #{isCompleted,jdbcType=INTEGER}
+  </select>
 </mapper>

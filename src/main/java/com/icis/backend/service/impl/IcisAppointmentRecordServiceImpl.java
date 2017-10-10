@@ -53,4 +53,9 @@ public class IcisAppointmentRecordServiceImpl implements IcisAppointmentRecordSe
     public List<IcisAppointmentRecord> selectMyAppointmentRecord(Long residentId) {
         return this.icisAppointmentRecordMapper.selectMyAppointmentRecord(residentId);
     }
+
+    @Override
+    public List<IcisAppointmentRecord> selectAvgAppointmentGrade(IcisAppointmentRecord icisAppointmentRecord) {
+        return this.icisAppointmentRecordMapper.selectAvgAppointmentGrade(icisAppointmentRecord);
+    }
 }

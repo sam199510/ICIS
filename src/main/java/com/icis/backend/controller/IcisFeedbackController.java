@@ -21,9 +21,15 @@ import java.util.List;
 @Controller
 @RequestMapping("/icisFeedback")
 public class IcisFeedbackController {
+    /**
+     * 将HttpServletRequest自动注入
+     */
     @Autowired
     private HttpServletRequest request;
 
+    /**
+     * 将IcisFeedbackService接口自动注入
+     */
     @Autowired
     private IcisFeedbackServiceI icisFeedbackServiceI;
 
@@ -36,8 +42,13 @@ public class IcisFeedbackController {
      * 请求：/icisFeedback/addFeedbackRecord.html
      * 请求类型：POST
      * @param icisFeedback
+     *        需要传入的参数有
+     *        content（反馈内容）
      * @param files
-     * @return
+     *        此files为传入的反馈图片
+     * @return 意见反馈是否成功
+     *         成功返回"反馈成功"
+     *         失败返回"反馈失败"
      */
     @RequestMapping(value = "addFeedbackRecord", method = RequestMethod.POST)
     @ResponseBody
@@ -78,7 +89,7 @@ public class IcisFeedbackController {
      * 获取所有反馈
      * 请求：/icisFeedback/selectAllFeedbackRecord.html
      * 请求类型：POST
-     * @return
+     * @return 反馈列表
      */
     @RequestMapping(value = "selectAllFeecbackRecord", method = RequestMethod.POST)
     @ResponseBody
