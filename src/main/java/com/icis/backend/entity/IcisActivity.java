@@ -21,6 +21,16 @@ public class IcisActivity {
 
     private String content3;
 
+    private Date startTime;
+
+    private Date finalTime;
+
+    private Date allowSignInStartTime;
+
+    private Date allowSignInFinalTime;
+
+    private Integer state;
+
     public Long getId() {
         return id;
     }
@@ -91,5 +101,45 @@ public class IcisActivity {
 
     public void setContent3(String content3) {
         this.content3 = content3 == null ? null : content3.trim();
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public Date getFinalTime() {
+        return finalTime;
+    }
+
+    public void setFinalTime(Date finalTime) {
+        this.finalTime = finalTime;
+    }
+
+    public Date getAllowSignInStartTime() {
+        return allowSignInStartTime;
+    }
+
+    public void setAllowSignInStartTime(Date allowSignInStartTime) {
+        this.allowSignInStartTime = allowSignInStartTime;
+    }
+
+    public Date getAllowSignInFinalTime() {
+        return allowSignInFinalTime;
+    }
+
+    public void setAllowSignInFinalTime(Date allowSignInFinalTime) {
+        this.allowSignInFinalTime = allowSignInFinalTime;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
     }
 }

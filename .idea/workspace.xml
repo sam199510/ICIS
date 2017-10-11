@@ -7,10 +7,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2808e1ec-45e6-4ed9-a901-a81380e61853" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisDynamicController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisDynamicController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicComment.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicComment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicSupport.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicSupport.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisActivityController.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisActivityController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisActivityController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisSignInController.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/controller/IcisSignInController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisActivityMapper.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/dao/IcisActivityMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/entity/IcisActivity.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/entity/IcisActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/entity/IcisSignIn.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/entity/IcisSignIn.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisActivityServiceI.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/IcisActivityServiceI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisActivityServiceImpl.class" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/com/icis/backend/service/impl/IcisActivityServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisSignInController.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/controller/IcisSignInController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisActivityMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/dao/IcisActivityMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/entity/IcisActivity.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/entity/IcisActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/entity/IcisSignIn.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/entity/IcisSignIn.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisActivityServiceI.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/IcisActivityServiceI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisActivityServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/icis/backend/service/impl/IcisActivityServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MySQL/ICIS.sql" afterPath="$PROJECT_DIR$/MySQL/ICIS.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logFile.log" afterPath="$PROJECT_DIR$/logFile.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisWorkerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisWorkerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisActivityMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisActivityMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisSignIn.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisSignIn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisActivityServiceI.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisActivityServiceI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisActivityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisActivityServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisSignInMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisSignInMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/frontend/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/frontend/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisActivityMapper.xml" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisActivityMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisSignInMapper.xml" afterPath="$PROJECT_DIR$/target/ICIS/WEB-INF/classes/mapper/IcisSignInMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ICIS/frontend/index.html" afterPath="$PROJECT_DIR$/target/ICIS/frontend/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/IcisActivityMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/IcisActivityMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/IcisSignInMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/IcisSignInMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,110 +51,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IcisNotificationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisNotificationController.java">
+      <file leaf-file-name="IcisActivityController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+            <state relative-caret-position="-421">
+              <caret line="153" column="7" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisDynamicSupportMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicSupportMapper.xml">
+      <file leaf-file-name="IcisActivityServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisActivityServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="29" />
+            <state relative-caret-position="386">
+              <caret line="38" column="73" lean-forward="false" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
               <folding>
-                <marker date="1507623219000" expanded="true" signature="788:903" ph="select from icis_dynamic_support" />
-                <marker date="1507623219000" expanded="true" signature="986:1055" ph="delete from " />
-                <marker date="1507623219000" expanded="true" signature="1154:1381" ph="insert into icis_dynamic_support... " />
-                <marker date="1507623219000" expanded="true" signature="2392:2795" ph="update icis_... " />
-                <marker date="1507623219000" expanded="true" signature="2906:3133" ph="update icis_... " />
-                <marker date="1507623219000" expanded="true" signature="3242:3386" ph="DELETE FROM " />
-                <marker date="1507623219000" expanded="true" signature="3503:3593" ph="SELECT * FRO... icis_dynamic_support" />
-                <marker date="1507623219000" expanded="true" signature="3727:3877" ph="SELECT * FRO... icis_dynamic_support" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisDynamicSupportMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisDynamicSupportMapper.java">
+      <file leaf-file-name="IcisSignInController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="84" />
+            <state relative-caret-position="374">
+              <caret line="93" column="5" lean-forward="false" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisDynamicSupportServiceI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisDynamicSupportServiceI.java">
+      <file leaf-file-name="IcisActivityMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisActivityMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" column="91" lean-forward="false" selection-start-line="25" selection-start-column="91" selection-end-line="25" selection-end-column="91" />
+            <state relative-caret-position="210">
+              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisDynamicSupportServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisDynamicSupportServiceImpl.java">
+      <file leaf-file-name="IcisActivityServiceI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisActivityServiceI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="37" column="92" lean-forward="false" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
+            <state relative-caret-position="315">
+              <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisDynamicController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisDynamicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1016">
-              <caret line="268" column="49" lean-forward="true" selection-start-line="268" selection-start-column="49" selection-end-line="268" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/frontend/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="96" column="42" lean-forward="true" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+            <state relative-caret-position="362">
+              <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisDynamicComment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicComment.java">
+      <file leaf-file-name="IcisActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="33" column="7" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="33" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IcisDynamic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisDynamic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="21">
               <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IcisDynamicSupport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicSupport.java">
+      <file leaf-file-name="IcisWorkerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisWorkerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="7" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="-112">
+              <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -146,6 +148,9 @@
       <find>String ipAddress = InetAddress.getLocalHost().getHostAddress();</find>
       <find>oneB</find>
       <find>self</find>
+      <find>signin</find>
+      <find>setTime</find>
+      <find>publishA</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisDynamicServiceI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisDynamicServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisDynamicMapper.java" />
@@ -177,15 +180,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisWorkerServiceI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisWorkerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisContactsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisFeedbackController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisNotificationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisOrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisRepairsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisResidentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisWorkerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/SysUserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisAppointmentRecordMapper.java" />
@@ -203,6 +203,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicSupport.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicComment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisDynamicController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisWorkerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisSignInMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisActivityMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisActivityServiceI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisActivityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/frontend/index.html" />
       </list>
     </option>
@@ -368,6 +378,9 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -507,9 +520,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -769,12 +779,13 @@
       <workItem from="1507600479478" duration="13343000" />
       <workItem from="1507623088346" duration="503000" />
       <workItem from="1507623599167" duration="540000" />
-      <workItem from="1507684729192" duration="287000" />
+      <workItem from="1507684729192" duration="9751000" />
+      <workItem from="1507714924146" duration="6569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22379000" />
+    <option name="totallyTimeSpent" value="38412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="22" width="1403" height="878" extended-state="0" />
@@ -794,7 +805,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -803,7 +814,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27700222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28067598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -823,84 +834,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisWorkerServiceI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="58" column="62" lean-forward="false" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisWorkerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="58" column="70" lean-forward="false" selection-start-line="58" selection-start-column="70" selection-end-line="58" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisWorkerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="306" column="29" lean-forward="false" selection-start-line="306" selection-start-column="29" selection-end-line="306" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="88" column="32" lean-forward="false" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/action/converter/DateConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisAppointmentItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisContactsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="102" column="26" lean-forward="false" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisContacts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -996,28 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisSignIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisWorkerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="123" column="28" lean-forward="false" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisResident.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1051,14 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1248">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,7 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,7 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="39" column="88" lean-forward="false" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,23 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisDynamicSupportServiceI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="91" lean-forward="false" selection-start-line="25" selection-start-column="91" selection-end-line="25" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisDynamicSupportServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="37" column="92" lean-forward="false" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,15 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="7" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicComment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="33" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,18 +1104,160 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/model/IcisDynamicComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="33" column="7" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="33" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisDynamicSupportServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="37" column="92" lean-forward="false" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisDynamicSupportServiceI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="91" lean-forward="false" selection-start-line="25" selection-start-column="91" selection-end-line="25" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisDynamicController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1016">
-          <caret line="268" column="49" lean-forward="true" selection-start-line="268" selection-start-column="49" selection-end-line="268" selection-end-column="49" />
+        <state relative-caret-position="-123">
+          <caret line="226" column="114" lean-forward="true" selection-start-line="226" selection-start-column="114" selection-end-line="226" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="66" column="20" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="66" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="294" column="22" lean-forward="false" selection-start-line="294" selection-start-column="22" selection-end-line="294" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisSignInMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisSignInServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="95" column="2" lean-forward="false" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3030">
+          <caret line="202" column="40" lean-forward="false" selection-start-line="202" selection-start-column="14" selection-end-line="202" selection-end-column="40" />
+          <folding>
+            <marker date="1507703908000" expanded="true" signature="1648:1756" ph="select from icis_activity" />
+            <marker date="1507703908000" expanded="true" signature="1839:1901" ph="delete from " />
+            <marker date="1507703908000" expanded="true" signature="1994:2688" ph="insert into icis_activity... " />
+            <marker date="1507703908000" expanded="true" signature="5226:6621" ph="update icis_... " />
+            <marker date="1507703908000" expanded="true" signature="6726:7448" ph="update icis_... " />
+            <marker date="1507703908000" expanded="true" signature="7529:7560" ph="SELECT * FRO... icis_activity" />
+            <marker date="1507703908000" expanded="true" signature="7680:7755" ph="SELECT * FRO... icis_activity" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisSignIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisActivityMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisActivityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="38" column="73" lean-forward="false" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisActivityServiceI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/frontend/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="96" column="42" lean-forward="true" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+        <state relative-caret-position="362">
+          <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisWorkerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-421">
+          <caret line="153" column="7" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="93" column="5" lean-forward="false" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -2,9 +2,6 @@ package com.icis.backend.entity;
 
 import java.util.Date;
 
-/**
- * 签到表
- */
 public class IcisSignIn {
     private Long id;
 
@@ -15,6 +12,12 @@ public class IcisSignIn {
     private Long signInOrId;
 
     private String signInActivity;
+
+    private Date signInActivityStartTime;
+
+    private Date signInActivityFinalTime;
+
+    private String signInActivityContent;
 
     public Long getId() {
         return id;
@@ -54,5 +57,29 @@ public class IcisSignIn {
 
     public void setSignInActivity(String signInActivity) {
         this.signInActivity = signInActivity == null ? null : signInActivity.trim();
+    }
+
+    public Date getSignInActivityStartTime() {
+        return signInActivityStartTime;
+    }
+
+    public void setSignInActivityStartTime(Date signInActivityStartTime) {
+        this.signInActivityStartTime = signInActivityStartTime;
+    }
+
+    public Date getSignInActivityFinalTime() {
+        return signInActivityFinalTime;
+    }
+
+    public void setSignInActivityFinalTime(Date signInActivityFinalTime) {
+        this.signInActivityFinalTime = signInActivityFinalTime;
+    }
+
+    public String getSignInActivityContent() {
+        return signInActivityContent;
+    }
+
+    public void setSignInActivityContent(String signInActivityContent) {
+        this.signInActivityContent = signInActivityContent == null ? null : signInActivityContent.trim();
     }
 }

@@ -19,4 +19,8 @@ public interface IcisActivityServiceI {
      * @return 发布活动是否成功
      */
     public int publishActivity(IcisActivity icisActivity);
+
+    public IcisActivity selectUnderwayIcisActivity(Integer state);
+
+    public int updateByPrimaryKeySelective(IcisActivity record);
 }

@@ -28,4 +28,14 @@ public class IcisActivityServiceImpl implements IcisActivityServiceI {
     public int publishActivity(IcisActivity icisActivity) {
         return this.icisActivityMapper.insert(icisActivity);
     }
+
+    @Override
+    public IcisActivity selectUnderwayIcisActivity(Integer state) {
+        return this.icisActivityMapper.selectUnderwayIcisActivity(state);
+    }
+
+    @Override
+    public int updateByPrimaryKeySelective(IcisActivity record) {
+        return this.icisActivityMapper.updateByPrimaryKeySelective(record);
+    }
 }

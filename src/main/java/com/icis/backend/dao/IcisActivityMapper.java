@@ -20,4 +20,6 @@ public interface IcisActivityMapper {
     int updateByPrimaryKey(IcisActivity record);
 
     List<IcisActivity> seleceAllIcisActivity();
+
+    IcisActivity selectUnderwayIcisActivity(Integer state);
 }

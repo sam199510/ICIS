@@ -46,7 +46,7 @@ public class IcisWorkerController {
 
     /**
      * 一键预约
-     * 请求：/IcisWorker/oneBtnToAppointment.html
+     * 请求：/icisWorker/oneBtnToAppointment.html
      * 请求类型：POST
      * @param resident
      *        需要传入的参数有：
