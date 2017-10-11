@@ -5,7 +5,7 @@ import java.util.Date;
 public class IcisDynamicSupport {
     private String dynamicSupportorNickname;
 
-    private Date dynamicSupportTime;
+//    private Date dynamicSupportTime;
 
     public String getDynamicSupportorNickname() {
         return dynamicSupportorNickname;
@@ -15,12 +15,12 @@ public class IcisDynamicSupport {
         this.dynamicSupportorNickname = dynamicSupportorNickname;
     }
 
-    public Date getDynamicSupportTime() {
-        return dynamicSupportTime;
-    }
-
-    public void setDynamicSupportTime(Date dynamicSupportTime) {
-        this.dynamicSupportTime = dynamicSupportTime;
-    }
+//    public Date getDynamicSupportTime() {
+//        return dynamicSupportTime;
+//    }
+//
+//    public void setDynamicSupportTime(Date dynamicSupportTime) {
+//        this.dynamicSupportTime = dynamicSupportTime;
+//    }
 
 }

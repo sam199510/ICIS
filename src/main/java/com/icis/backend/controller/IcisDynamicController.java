@@ -243,7 +243,8 @@ public class IcisDynamicController {
             //循环遍历点赞列表
             for (IcisDynamicSupport icisDynamicSupport : icisDynamicSupports) {
                 com.icis.backend.model.IcisDynamicSupport icisDynamicSupportItem = new com.icis.backend.model.IcisDynamicSupport();
-                icisDynamicSupportItem.setDynamicSupportTime(icisDynamicSupport.getSupporterTime());
+                //先把点赞时间注解掉
+                //icisDynamicSupportItem.setDynamicSupportTime(icisDynamicSupport.getSupporterTime());
                 icisDynamicSupportItem.setDynamicSupportorNickname(this.icisResidentServiceI.selectByPrimaryKey(icisDynamicSupport.getSupportorId()).getNickname());
                 icisDynamicSupportModel.add(icisDynamicSupportItem);
             }
@@ -257,7 +258,8 @@ public class IcisDynamicController {
             for (IcisDynamicComment icisDynamicComment: icisDynamicComments) {
                 com.icis.backend.model.IcisDynamicComment icisDynamicCommentItem = new com.icis.backend.model.IcisDynamicComment();
                 icisDynamicCommentItem.setDynamicCommentContent(icisDynamicComment.getContent());
-                icisDynamicCommentItem.setDynamicCommentTime(icisDynamicComment.getCommentTime());
+                //先把评论时间注解掉
+                //icisDynamicCommentItem.setDynamicCommentTime(icisDynamicComment.getCommentTime());
                 icisDynamicCommentItem.setDynamicCommentorNickname(this.icisResidentServiceI.selectByPrimaryKey(icisDynamicComment.getCommentorId()).getNickname());
                 icisDynamicCommentModel.add(icisDynamicCommentItem);
             }

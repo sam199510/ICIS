@@ -7,7 +7,7 @@ public class IcisDynamicComment {
 
     private String dynamicCommentContent;
 
-    private Date dynamicCommentTime;
+//    private Date dynamicCommentTime;
 
     public String getDynamicCommentorNickname() {
         return dynamicCommentorNickname;
@@ -25,11 +25,11 @@ public class IcisDynamicComment {
         this.dynamicCommentContent = dynamicCommentContent;
     }
 
-    public Date getDynamicCommentTime() {
-        return dynamicCommentTime;
-    }
-
-    public void setDynamicCommentTime(Date dynamicCommentTime) {
-        this.dynamicCommentTime = dynamicCommentTime;
-    }
+//    public Date getDynamicCommentTime() {
+//        return dynamicCommentTime;
+//    }
+//
+//    public void setDynamicCommentTime(Date dynamicCommentTime) {
+//        this.dynamicCommentTime = dynamicCommentTime;
+//    }
 }
