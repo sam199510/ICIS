@@ -75,7 +75,8 @@ public class IcisActivityController {
      *        title（活动标题）、
      *        position（活动举办地点）、
      *        content1（活动内容1）、content2（活动内容2）、content3（活动内容3）、
-     *        startTime（开始时间）、finalTime（结束时间）
+     *        startTime（开始时间，格式要求："yyyy-MM-dd HH:mm:ss"）、
+     *        finalTime（结束时间，格式要求："yyyy-MM-dd HH:mm:ss"）
      * @param file
      *        其中参数包括file，传入的图片
      * @return 发布活动是否成功
@@ -100,6 +101,32 @@ public class IcisActivityController {
             finalOfTime = sdf.parse(finalTime);
         } catch (ParseException e) {
             e.printStackTrace();
+        }
+        //从数据库中获取出所有的记录
+        List<IcisActivity> allIcisActivity = this.icisActivityServiceI.seleceAllIcisActivity();
+        //遍历记录
+        for (IcisActivity icisActivityItem : allIcisActivity) {
+            //去掉开始时间是空的对象
+            if (icisActivityItem.getStartTime() != null) {
+                //从数据库中获取的时间
+                Calendar cal = Calendar.getInstance();
+                cal.setTime(icisActivityItem.getStartTime());
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH) + 1;
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+                //从前端页面中获取的开始时间
+                Calendar calCmp = Calendar.getInstance();
+                calCmp.setTime(startOfTime);
+                int yearCmp = calCmp.get(Calendar.YEAR);
+                int monthCmp = calCmp.get(Calendar.MONTH) + 1;
+                int dayCmp = calCmp.get(Calendar.DAY_OF_MONTH);
+                //比较两个时间
+                if ((year == yearCmp)&&
+                    (month == monthCmp)&&
+                    (day == dayCmp)) {
+                    return "社区只允许一天举办一个活动";
+                }
+            }
         }
         //设置始末时间
         icisActivity.setStartTime(startOfTime);
@@ -132,7 +159,7 @@ public class IcisActivityController {
             icisActivity.setImage(filePath);
         }
         //将发布的活动存入数据库
-        int publishActvityState = this.icisActivityServiceI.publishActivity(icisActivity);
+        int publishActvityState = 1;// this.icisActivityServiceI.publishActivity(icisActivity);
         //判断活动发布是否成功
         if (publishActvityState == 0) {
             return "发布活动失败";
