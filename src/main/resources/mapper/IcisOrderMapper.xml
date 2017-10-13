@@ -142,6 +142,7 @@
     SELECT *
     FROM icis_order
     WHERE payor_id = #{payorId,jdbcType=BIGINT}
+    ORDER BY create_time DESC
   </select>
   <update id="completeIcisOrder" parameterType="com.icis.backend.entity.IcisOrder">
     UPDATE icis_order

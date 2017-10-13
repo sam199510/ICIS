@@ -189,6 +189,7 @@
   <select id="selectAllAppointmentRecord" resultMap="BaseResultMap">
     SELECT *
     FROM icis_appointment_record
+    ORDER BY create_time DESC
   </select>
   <select id="selectMyAppointmentRecord" parameterType="java.lang.Long" resultMap="BaseResultMap">
     SELECT *

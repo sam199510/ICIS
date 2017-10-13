@@ -106,5 +106,6 @@
   <select id="selectAllFeedbackRecord" resultMap="BaseResultMap">
     SELECT *
     FROM icis_feedback
+    ORDER BY time DESC
   </select>
 </mapper>

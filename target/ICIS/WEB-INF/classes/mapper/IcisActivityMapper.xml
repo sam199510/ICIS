@@ -199,6 +199,7 @@
   <select id="seleceAllIcisActivity" resultMap="BaseResultMap">
     SELECT *
     FROM icis_activity
+    ORDER BY publish_time DESC
   </select>
   <select id="selectUnderwayIcisActivity" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     SELECT *

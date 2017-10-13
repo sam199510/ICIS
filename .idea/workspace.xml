@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2808e1ec-45e6-4ed9-a901-a81380e61853" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/frontend/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/frontend/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisFeedbackMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisFeedbackMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisOrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisOrderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/IcisRepairsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/IcisRepairsMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,83 +23,183 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IcisActivityController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java">
+      <file leaf-file-name="IcisDynamicMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysUserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/SysUserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IcisSignInController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="65" column="78" lean-forward="false" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IcisActivityServiceI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisActivityServiceI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/frontend/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IcisAppointmentRecordController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisAppointmentRecordController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="338" column="28" lean-forward="false" selection-start-line="338" selection-start-column="28" selection-end-line="338" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IcisAppointmentRecordMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="204" column="9" lean-forward="true" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
+            <state relative-caret-position="-1246">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1507877423000" expanded="true" signature="1531:1649" ph="select from icis_appointment_record" />
-                <marker date="1507877423000" expanded="true" signature="1732:1804" ph="delete from " />
-                <marker date="1507877423000" expanded="true" signature="1906:2547" ph="insert into icis_appointment_record... " />
-                <marker date="1507877423000" expanded="true" signature="4856:6099" ph="update icis_... " />
-                <marker date="1507877423000" expanded="true" signature="6213:6868" ph="update icis_... " />
-                <marker date="1507877423000" expanded="true" signature="6983:7159" ph="UPDATE icis_... " />
-                <marker date="1507877423000" expanded="true" signature="7273:7459" ph="UPDATE icis_... " />
-                <marker date="1507877423000" expanded="true" signature="7545:7586" ph="SELECT * FRO... icis_appointment_record" />
-                <marker date="1507877423000" expanded="true" signature="7702:7797" ph="SELECT * FRO... icis_appointment_record" />
-                <marker date="1507877423000" expanded="true" signature="7702:7827" ph="SELECT * FRO... icis_appointment_record" />
-                <marker date="1507877423000" expanded="true" signature="7974:8126" ph="SELECT AVG(s... icis_appointment_record" />
+                <marker date="1507524117000" expanded="true" signature="979:1086" ph="select from icis_dynamic" />
+                <marker date="1507524117000" expanded="true" signature="1169:1230" ph="delete from " />
+                <marker date="1507524117000" expanded="true" signature="1322:1662" ph="insert into icis_dynamic... " />
+                <marker date="1507524117000" expanded="true" signature="3002:3628" ph="update icis_... " />
+                <marker date="1507524117000" expanded="true" signature="3732:4072" ph="update icis_... " />
+                <marker date="1507524117000" expanded="true" signature="4152:4213" ph="SELECT * FRO... icis_dynamic" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisDynamicSupportMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicSupportMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="29" />
+              <folding>
+                <marker date="1507623219000" expanded="true" signature="788:903" ph="select from icis_dynamic_support" />
+                <marker date="1507623219000" expanded="true" signature="986:1055" ph="delete from " />
+                <marker date="1507623219000" expanded="true" signature="1154:1381" ph="insert into icis_dynamic_support... " />
+                <marker date="1507623219000" expanded="true" signature="2392:2795" ph="update icis_... " />
+                <marker date="1507623219000" expanded="true" signature="2906:3133" ph="update icis_... " />
+                <marker date="1507623219000" expanded="true" signature="3242:3386" ph="DELETE FROM " />
+                <marker date="1507623219000" expanded="true" signature="3503:3593" ph="SELECT * FRO... icis_dynamic_support" />
+                <marker date="1507623219000" expanded="true" signature="3727:3877" ph="SELECT * FRO... icis_dynamic_support" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisFeedbackMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisFeedbackMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+              <folding>
+                <marker date="1507883075000" expanded="true" signature="876:984" ph="select from icis_feedback" />
+                <marker date="1507883075000" expanded="true" signature="1067:1129" ph="delete from " />
+                <marker date="1507883075000" expanded="true" signature="1222:1495" ph="insert into icis_feedback... " />
+                <marker date="1507883075000" expanded="true" signature="2706:3233" ph="update icis_... " />
+                <marker date="1507883075000" expanded="true" signature="3338:3611" ph="update icis_... " />
+                <marker date="1507883075000" expanded="true" signature="3694:3748" ph="SELECT * FRO... icis_feedback" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisNotificationMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisNotificationMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1051">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1506929030000" expanded="true" signature="796:908" ph="select from icis_notification" />
+                <marker date="1506929030000" expanded="true" signature="991:1057" ph="delete from " />
+                <marker date="1506929030000" expanded="true" signature="1154:1371" ph="insert into icis_notification... " />
+                <marker date="1506929030000" expanded="true" signature="2438:2867" ph="update icis_... " />
+                <marker date="1506929030000" expanded="true" signature="2976:3200" ph="update icis_... " />
+                <marker date="1506929030000" expanded="true" signature="3281:3339" ph="SELECT * FRO... icis_notification" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisOrderMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisOrderMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="144" column="29" lean-forward="false" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
+              <folding>
+                <marker date="1507883075000" expanded="true" signature="1136:1241" ph="select from icis_order" />
+                <marker date="1507883075000" expanded="true" signature="1324:1383" ph="delete from " />
+                <marker date="1507883075000" expanded="true" signature="1473:1888" ph="insert into icis_order... " />
+                <marker date="1507883075000" expanded="true" signature="3559:4386" ph="update icis_... " />
+                <marker date="1507883075000" expanded="true" signature="4488:4910" ph="update icis_... " />
+                <marker date="1507883075000" expanded="true" signature="5029:5135" ph="SELECT * FRO... icis_order" />
+                <marker date="1507883075000" expanded="true" signature="5236:5380" ph="UPDATE icis_... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisRepairsMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisRepairsMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="155" column="22" lean-forward="false" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
+              <folding>
+                <marker date="1507883123000" expanded="true" signature="1208:1315" ph="select from icis_repairs" />
+                <marker date="1507883123000" expanded="true" signature="1398:1459" ph="delete from " />
+                <marker date="1507883123000" expanded="true" signature="1551:2000" ph="insert into icis_repairs... " />
+                <marker date="1507883123000" expanded="true" signature="3813:4727" ph="update icis_... " />
+                <marker date="1507883123000" expanded="true" signature="4831:5294" ph="update icis_... " />
+                <marker date="1507883123000" expanded="true" signature="5404:5511" ph="SELECT * FRO... icis_repairs" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisResidentMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisResidentMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2416">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507530840000" expanded="true" signature="1306:1414" ph="select from icis_resident" />
+                <marker date="1507530840000" expanded="true" signature="1497:1559" ph="delete from " />
+                <marker date="1507530840000" expanded="true" signature="1652:2147" ph="insert into icis_resident... " />
+                <marker date="1507530840000" expanded="true" signature="4124:5143" ph="update icis_... " />
+                <marker date="1507530840000" expanded="true" signature="5248:5764" ph="update icis_... " />
+                <marker date="1507530840000" expanded="true" signature="5841:5872" ph="SELECT * FRO... icis_resident" />
+                <marker date="1507530840000" expanded="true" signature="6002:6083" ph="SELECT * FRO... icis_resident" />
+                <marker date="1507530840000" expanded="true" signature="6223:6352" ph="SELECT * FRO... icis_resident" />
+                <marker date="1507530840000" expanded="true" signature="6473:6554" ph="SELECT * FRO... icis_resident" />
+                <marker date="1507530840000" expanded="true" signature="6679:6747" ph="SELECT * FRO... icis_resident" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisSignInMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisSignInMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1546">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507701861000" expanded="true" signature="1291:1398" ph="select from icis_sign_in" />
+                <marker date="1507701861000" expanded="true" signature="1481:1542" ph="delete from " />
+                <marker date="1507701861000" expanded="true" signature="1633:2160" ph="insert into icis_sign_in... " />
+                <marker date="1507701861000" expanded="true" signature="3965:4913" ph="update icis_... " />
+                <marker date="1507701861000" expanded="true" signature="5016:5543" ph="update icis_... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IcisWorkerMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisWorkerMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2895">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1507530840000" expanded="true" signature="1416:1522" ph="select from icis_worker" />
+                <marker date="1507530840000" expanded="true" signature="1605:1665" ph="delete from " />
+                <marker date="1507530840000" expanded="true" signature="1756:2306" ph="insert into icis_worker... " />
+                <marker date="1507530840000" expanded="true" signature="4512:5670" ph="update icis_... " />
+                <marker date="1507530840000" expanded="true" signature="5773:6344" ph="update icis_... " />
+                <marker date="1507530840000" expanded="true" signature="6471:6584" ph="SELECT * FRO... icis_worker" />
+                <marker date="1507530840000" expanded="true" signature="6688:6785" ph="UPDATE icis_... " />
+                <marker date="1507530840000" expanded="true" signature="6904:6970" ph="SELECT * FRO... icis_worker" />
+                <marker date="1507530840000" expanded="true" signature="7098:7177" ph="SELECT * FRO... icis_worker" />
+                <marker date="1507530840000" expanded="true" signature="7321:7453" ph="SELECT * FRO... icis_worker" />
+                <marker date="1507530840000" expanded="true" signature="7574:7640" ph="SELECT * FRO... icis_worker" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysUserMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SysUserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="137" column="11" lean-forward="true" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
+              <folding>
+                <marker date="1506597883000" expanded="true" signature="1066:1169" ph="select from sys_user" />
+                <marker date="1506597883000" expanded="true" signature="1252:1309" ph="delete from " />
+                <marker date="1506597883000" expanded="true" signature="1397:1764" ph="insert into sys_user... " />
+                <marker date="1506597883000" expanded="true" signature="3305:4051" ph="update sys_u... " />
+                <marker date="1506597883000" expanded="true" signature="4151:4532" ph="update sys_u... " />
+                <marker date="1506597883000" expanded="true" signature="4654:4730" ph="SELECT * FRO... sys_user" />
+                <marker date="1506597883000" expanded="true" signature="4872:5002" ph="SELECT * FRO... sys_user" />
               </folding>
             </state>
           </provider>
@@ -134,8 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisDynamicServiceI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisDynamicServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisDynamicMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisNotificationServiceI.java" />
@@ -177,13 +278,16 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisSignInMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisSignInController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisActivityMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisActivityServiceI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisActivityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/frontend/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisFeedbackMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/IcisRepairsMapper.xml" />
       </list>
     </option>
   </component>
@@ -214,7 +318,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="36" />
     <option name="y" value="22" />
     <option name="width" value="1404" />
@@ -826,15 +930,15 @@
       <workItem from="1507775089851" duration="3465000" />
       <workItem from="1507800105887" duration="7621000" />
       <workItem from="1507809111559" duration="6000" />
-      <workItem from="1507860561295" duration="4008000" />
+      <workItem from="1507860561295" duration="5180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54130000" />
+    <option name="totallyTimeSpent" value="55302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="22" width="1404" height="878" extended-state="1" />
+    <frame x="36" y="22" width="1404" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -886,83 +990,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisFeedback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisNotificationServiceI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/impl/IcisNotificationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisDynamicSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisRepairs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisResident.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/SysUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/entity/IcisAppointmentRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/service/IcisAppointmentRecordServiceI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -984,23 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
-          <caret line="161" column="36" lean-forward="false" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="36" />
-          <folding>
-            <marker date="1507616071000" expanded="true" signature="1298:1414" ph="select from icis_appointment_item" />
-            <marker date="1507616071000" expanded="true" signature="1497:1567" ph="delete from " />
-            <marker date="1507616071000" expanded="true" signature="1667:2169" ph="insert into icis_appointment_item... " />
-            <marker date="1507616071000" expanded="true" signature="4095:5084" ph="update icis_... " />
-            <marker date="1507616071000" expanded="true" signature="5196:5712" ph="update icis_... " />
-            <marker date="1507616071000" expanded="true" signature="5800:5839" ph="SELECT * FRO... icis_appointment_item" />
-            <marker date="1507616071000" expanded="true" signature="5967:6043" ph="SELECT * FRO... icis_appointment_item" />
-            <marker date="1507616071000" expanded="true" signature="6159:6278" ph="UPDATE icis_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/dao/IcisAppointmentItemMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1019,23 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="39" column="88" lean-forward="false" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicSupportMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="29" />
-          <folding>
-            <marker date="1507623219000" expanded="true" signature="788:903" ph="select from icis_dynamic_support" />
-            <marker date="1507623219000" expanded="true" signature="986:1055" ph="delete from " />
-            <marker date="1507623219000" expanded="true" signature="1154:1381" ph="insert into icis_dynamic_support... " />
-            <marker date="1507623219000" expanded="true" signature="2392:2795" ph="update icis_... " />
-            <marker date="1507623219000" expanded="true" signature="2906:3133" ph="update icis_... " />
-            <marker date="1507623219000" expanded="true" signature="3242:3386" ph="DELETE FROM " />
-            <marker date="1507623219000" expanded="true" signature="3503:3593" ph="SELECT * FRO... icis_dynamic_support" />
-            <marker date="1507623219000" expanded="true" signature="3727:3877" ph="SELECT * FRO... icis_dynamic_support" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,23 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="207" column="37" lean-forward="false" selection-start-line="207" selection-start-column="14" selection-end-line="207" selection-end-column="37" />
-          <folding>
-            <marker date="1507804684000" expanded="true" signature="1648:1756" ph="select from icis_activity" />
-            <marker date="1507804684000" expanded="true" signature="1839:1901" ph="delete from " />
-            <marker date="1507804684000" expanded="true" signature="1994:2688" ph="insert into icis_activity... " />
-            <marker date="1507804684000" expanded="true" signature="5226:6621" ph="update icis_... " />
-            <marker date="1507804684000" expanded="true" signature="6726:7448" ph="update icis_... " />
-            <marker date="1507804684000" expanded="true" signature="7529:7560" ph="SELECT * FRO... icis_activity" />
-            <marker date="1507804684000" expanded="true" signature="7680:7755" ph="SELECT * FRO... icis_activity" />
-            <marker date="1507804684000" expanded="true" signature="7838:7946" ph="SELECT * FRO... icis_activity" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisActivityController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1278,26 +1254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="204" column="9" lean-forward="true" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
-          <folding>
-            <marker date="1507877423000" expanded="true" signature="1531:1649" ph="select from icis_appointment_record" />
-            <marker date="1507877423000" expanded="true" signature="1732:1804" ph="delete from " />
-            <marker date="1507877423000" expanded="true" signature="1906:2547" ph="insert into icis_appointment_record... " />
-            <marker date="1507877423000" expanded="true" signature="4856:6099" ph="update icis_... " />
-            <marker date="1507877423000" expanded="true" signature="6213:6868" ph="update icis_... " />
-            <marker date="1507877423000" expanded="true" signature="6983:7159" ph="UPDATE icis_... " />
-            <marker date="1507877423000" expanded="true" signature="7273:7459" ph="UPDATE icis_... " />
-            <marker date="1507877423000" expanded="true" signature="7545:7586" ph="SELECT * FRO... icis_appointment_record" />
-            <marker date="1507877423000" expanded="true" signature="7702:7797" ph="SELECT * FRO... icis_appointment_record" />
-            <marker date="1507877423000" expanded="true" signature="7702:7827" ph="SELECT * FRO... icis_appointment_record" />
-            <marker date="1507877423000" expanded="true" signature="7974:8126" ph="SELECT AVG(s... icis_appointment_record" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icis/backend/controller/IcisAppointmentRecordController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1308,9 +1264,258 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/frontend/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+        <state relative-caret-position="389">
+          <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisActivityMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="201" column="30" lean-forward="false" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
+          <folding>
+            <marker date="1507882938000" expanded="true" signature="1648:1756" ph="select from icis_activity" />
+            <marker date="1507882938000" expanded="true" signature="1839:1901" ph="delete from " />
+            <marker date="1507882938000" expanded="true" signature="1994:2688" ph="insert into icis_activity... " />
+            <marker date="1507882938000" expanded="true" signature="5226:6621" ph="update icis_... " />
+            <marker date="1507882938000" expanded="true" signature="6726:7448" ph="update icis_... " />
+            <marker date="1507882938000" expanded="true" signature="7529:7560" ph="SELECT * FRO... icis_activity" />
+            <marker date="1507882938000" expanded="true" signature="7529:7591" ph="SELECT * FRO... icis_activity" />
+            <marker date="1507882938000" expanded="true" signature="7711:7786" ph="SELECT * FRO... icis_activity" />
+            <marker date="1507882938000" expanded="true" signature="7869:7977" ph="SELECT * FRO... icis_activity" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="161" column="36" lean-forward="false" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="36" />
+          <folding>
+            <marker date="1507616071000" expanded="true" signature="1298:1414" ph="select from icis_appointment_item" />
+            <marker date="1507616071000" expanded="true" signature="1497:1567" ph="delete from " />
+            <marker date="1507616071000" expanded="true" signature="1667:2169" ph="insert into icis_appointment_item... " />
+            <marker date="1507616071000" expanded="true" signature="4095:5084" ph="update icis_... " />
+            <marker date="1507616071000" expanded="true" signature="5196:5712" ph="update icis_... " />
+            <marker date="1507616071000" expanded="true" signature="5800:5839" ph="SELECT * FRO... icis_appointment_item" />
+            <marker date="1507616071000" expanded="true" signature="5967:6043" ph="SELECT * FRO... icis_appointment_item" />
+            <marker date="1507616071000" expanded="true" signature="6159:6278" ph="UPDATE icis_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisAppointmentRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="197" column="29" lean-forward="true" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
+          <folding>
+            <marker date="1507882938000" expanded="true" signature="1531:1649" ph="select from icis_appointment_record" />
+            <marker date="1507882938000" expanded="true" signature="1732:1804" ph="delete from " />
+            <marker date="1507882938000" expanded="true" signature="1906:2547" ph="insert into icis_appointment_record... " />
+            <marker date="1507882938000" expanded="true" signature="4856:6099" ph="update icis_... " />
+            <marker date="1507882938000" expanded="true" signature="6213:6868" ph="update icis_... " />
+            <marker date="1507882938000" expanded="true" signature="6983:7159" ph="UPDATE icis_... " />
+            <marker date="1507882938000" expanded="true" signature="7273:7459" ph="UPDATE icis_... " />
+            <marker date="1507882938000" expanded="true" signature="7545:7586" ph="SELECT * FRO... icis_appointment_record" />
+            <marker date="1507882938000" expanded="true" signature="7545:7616" ph="SELECT * FRO... icis_appointment_record" />
+            <marker date="1507882938000" expanded="true" signature="7732:7827" ph="SELECT * FRO... icis_appointment_record" />
+            <marker date="1507882938000" expanded="true" signature="7732:7857" ph="SELECT * FRO... icis_appointment_record" />
+            <marker date="1507882938000" expanded="true" signature="8004:8156" ph="SELECT AVG(s... icis_appointment_record" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisContactsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1831">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506924760000" expanded="true" signature="1128:1236" ph="select from icis_contacts" />
+            <marker date="1506924760000" expanded="true" signature="1319:1381" ph="delete from " />
+            <marker date="1506924760000" expanded="true" signature="1474:1884" ph="insert into icis_contacts... " />
+            <marker date="1506924760000" expanded="true" signature="3554:4375" ph="update icis_... " />
+            <marker date="1506924760000" expanded="true" signature="4480:4897" ph="update icis_... " />
+            <marker date="1506924760000" expanded="true" signature="5028:5101" ph="SELECT * FRO... icis_contacts" />
+            <marker date="1506924760000" expanded="true" signature="5182:5213" ph="SELECT * FRO... icis_contacts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicCommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1051">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507014474000" expanded="true" signature="861:976" ph="select from icis_dynamic_comment" />
+            <marker date="1507014474000" expanded="true" signature="1059:1128" ph="delete from " />
+            <marker date="1507014474000" expanded="true" signature="1227:1488" ph="insert into icis_dynamic_comment... " />
+            <marker date="1507014474000" expanded="true" signature="2637:3127" ph="update icis_... " />
+            <marker date="1507014474000" expanded="true" signature="3238:3506" ph="update icis_... " />
+            <marker date="1507014474000" expanded="true" signature="3628:3718" ph="SELECT * FRO... icis_dynamic_comment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1246">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507524117000" expanded="true" signature="979:1086" ph="select from icis_dynamic" />
+            <marker date="1507524117000" expanded="true" signature="1169:1230" ph="delete from " />
+            <marker date="1507524117000" expanded="true" signature="1322:1662" ph="insert into icis_dynamic... " />
+            <marker date="1507524117000" expanded="true" signature="3002:3628" ph="update icis_... " />
+            <marker date="1507524117000" expanded="true" signature="3732:4072" ph="update icis_... " />
+            <marker date="1507524117000" expanded="true" signature="4152:4213" ph="SELECT * FRO... icis_dynamic" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisDynamicSupportMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="14" selection-end-line="91" selection-end-column="29" />
+          <folding>
+            <marker date="1507623219000" expanded="true" signature="788:903" ph="select from icis_dynamic_support" />
+            <marker date="1507623219000" expanded="true" signature="986:1055" ph="delete from " />
+            <marker date="1507623219000" expanded="true" signature="1154:1381" ph="insert into icis_dynamic_support... " />
+            <marker date="1507623219000" expanded="true" signature="2392:2795" ph="update icis_... " />
+            <marker date="1507623219000" expanded="true" signature="2906:3133" ph="update icis_... " />
+            <marker date="1507623219000" expanded="true" signature="3242:3386" ph="DELETE FROM " />
+            <marker date="1507623219000" expanded="true" signature="3503:3593" ph="SELECT * FRO... icis_dynamic_support" />
+            <marker date="1507623219000" expanded="true" signature="3727:3877" ph="SELECT * FRO... icis_dynamic_support" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisFeedbackMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+          <folding>
+            <marker date="1507883075000" expanded="true" signature="876:984" ph="select from icis_feedback" />
+            <marker date="1507883075000" expanded="true" signature="1067:1129" ph="delete from " />
+            <marker date="1507883075000" expanded="true" signature="1222:1495" ph="insert into icis_feedback... " />
+            <marker date="1507883075000" expanded="true" signature="2706:3233" ph="update icis_... " />
+            <marker date="1507883075000" expanded="true" signature="3338:3611" ph="update icis_... " />
+            <marker date="1507883075000" expanded="true" signature="3694:3748" ph="SELECT * FRO... icis_feedback" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisNotificationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1051">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506929030000" expanded="true" signature="796:908" ph="select from icis_notification" />
+            <marker date="1506929030000" expanded="true" signature="991:1057" ph="delete from " />
+            <marker date="1506929030000" expanded="true" signature="1154:1371" ph="insert into icis_notification... " />
+            <marker date="1506929030000" expanded="true" signature="2438:2867" ph="update icis_... " />
+            <marker date="1506929030000" expanded="true" signature="2976:3200" ph="update icis_... " />
+            <marker date="1506929030000" expanded="true" signature="3281:3339" ph="SELECT * FRO... icis_notification" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="144" column="29" lean-forward="false" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
+          <folding>
+            <marker date="1507883075000" expanded="true" signature="1136:1241" ph="select from icis_order" />
+            <marker date="1507883075000" expanded="true" signature="1324:1383" ph="delete from " />
+            <marker date="1507883075000" expanded="true" signature="1473:1888" ph="insert into icis_order... " />
+            <marker date="1507883075000" expanded="true" signature="3559:4386" ph="update icis_... " />
+            <marker date="1507883075000" expanded="true" signature="4488:4910" ph="update icis_... " />
+            <marker date="1507883075000" expanded="true" signature="5029:5135" ph="SELECT * FRO... icis_order" />
+            <marker date="1507883075000" expanded="true" signature="5236:5380" ph="UPDATE icis_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisRepairsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="155" column="22" lean-forward="false" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
+          <folding>
+            <marker date="1507883123000" expanded="true" signature="1208:1315" ph="select from icis_repairs" />
+            <marker date="1507883123000" expanded="true" signature="1398:1459" ph="delete from " />
+            <marker date="1507883123000" expanded="true" signature="1551:2000" ph="insert into icis_repairs... " />
+            <marker date="1507883123000" expanded="true" signature="3813:4727" ph="update icis_... " />
+            <marker date="1507883123000" expanded="true" signature="4831:5294" ph="update icis_... " />
+            <marker date="1507883123000" expanded="true" signature="5404:5511" ph="SELECT * FRO... icis_repairs" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisResidentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2416">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507530840000" expanded="true" signature="1306:1414" ph="select from icis_resident" />
+            <marker date="1507530840000" expanded="true" signature="1497:1559" ph="delete from " />
+            <marker date="1507530840000" expanded="true" signature="1652:2147" ph="insert into icis_resident... " />
+            <marker date="1507530840000" expanded="true" signature="4124:5143" ph="update icis_... " />
+            <marker date="1507530840000" expanded="true" signature="5248:5764" ph="update icis_... " />
+            <marker date="1507530840000" expanded="true" signature="5841:5872" ph="SELECT * FRO... icis_resident" />
+            <marker date="1507530840000" expanded="true" signature="6002:6083" ph="SELECT * FRO... icis_resident" />
+            <marker date="1507530840000" expanded="true" signature="6223:6352" ph="SELECT * FRO... icis_resident" />
+            <marker date="1507530840000" expanded="true" signature="6473:6554" ph="SELECT * FRO... icis_resident" />
+            <marker date="1507530840000" expanded="true" signature="6679:6747" ph="SELECT * FRO... icis_resident" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisSignInMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1546">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507701861000" expanded="true" signature="1291:1398" ph="select from icis_sign_in" />
+            <marker date="1507701861000" expanded="true" signature="1481:1542" ph="delete from " />
+            <marker date="1507701861000" expanded="true" signature="1633:2160" ph="insert into icis_sign_in... " />
+            <marker date="1507701861000" expanded="true" signature="3965:4913" ph="update icis_... " />
+            <marker date="1507701861000" expanded="true" signature="5016:5543" ph="update icis_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IcisWorkerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2895">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1507530840000" expanded="true" signature="1416:1522" ph="select from icis_worker" />
+            <marker date="1507530840000" expanded="true" signature="1605:1665" ph="delete from " />
+            <marker date="1507530840000" expanded="true" signature="1756:2306" ph="insert into icis_worker... " />
+            <marker date="1507530840000" expanded="true" signature="4512:5670" ph="update icis_... " />
+            <marker date="1507530840000" expanded="true" signature="5773:6344" ph="update icis_... " />
+            <marker date="1507530840000" expanded="true" signature="6471:6584" ph="SELECT * FRO... icis_worker" />
+            <marker date="1507530840000" expanded="true" signature="6688:6785" ph="UPDATE icis_... " />
+            <marker date="1507530840000" expanded="true" signature="6904:6970" ph="SELECT * FRO... icis_worker" />
+            <marker date="1507530840000" expanded="true" signature="7098:7177" ph="SELECT * FRO... icis_worker" />
+            <marker date="1507530840000" expanded="true" signature="7321:7453" ph="SELECT * FRO... icis_worker" />
+            <marker date="1507530840000" expanded="true" signature="7574:7640" ph="SELECT * FRO... icis_worker" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SysUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="137" column="11" lean-forward="true" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
+          <folding>
+            <marker date="1506597883000" expanded="true" signature="1066:1169" ph="select from sys_user" />
+            <marker date="1506597883000" expanded="true" signature="1252:1309" ph="delete from " />
+            <marker date="1506597883000" expanded="true" signature="1397:1764" ph="insert into sys_user... " />
+            <marker date="1506597883000" expanded="true" signature="3305:4051" ph="update sys_u... " />
+            <marker date="1506597883000" expanded="true" signature="4151:4532" ph="update sys_u... " />
+            <marker date="1506597883000" expanded="true" signature="4654:4730" ph="SELECT * FRO... sys_user" />
+            <marker date="1506597883000" expanded="true" signature="4872:5002" ph="SELECT * FRO... sys_user" />
+          </folding>
         </state>
       </provider>
     </entry>
