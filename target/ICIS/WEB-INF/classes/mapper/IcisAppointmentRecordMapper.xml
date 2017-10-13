@@ -194,6 +194,7 @@
     SELECT *
     FROM icis_appointment_record
     WHERE resident_id = #{residentId,jdbcType=BIGINT}
+    ORDER BY create_time DESC
   </select>
   <select id="selectAvgAppointmentGrade" parameterType="com.icis.backend.entity.IcisAppointmentRecord" resultMap="BaseResultMap">
     SELECT *
