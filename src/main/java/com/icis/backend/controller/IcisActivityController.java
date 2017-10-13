@@ -198,24 +198,42 @@ public class IcisActivityController {
         }
     }
 
-
+    /**
+     * 一键开始时间监听
+     * 请求：/icisActivity/oneBtnToStartTimeListener.html
+     * 请求类型：POST
+     * @return 一键监听结果
+     */
     @RequestMapping(value = "oneBtnToStartTimeListener", method = RequestMethod.POST)
     @ResponseBody
     public String oneBtnToStartTimeListener(){
+        //筛选当天的活动
         IcisActivity icisActivity = this.icisActivityServiceI.selectIcisActivityToday();
+        //建立一个时间监听对象
         t = new TimeTest();
+        //设置初始监听时间
         t.setStartTime(icisActivity.getAllowSignInStartTime());
+        //设置结束监听时间
         t.setFinalTime(icisActivity.getAllowSignInFinalTime());
+        //设置活动id
         t.setActivityId(icisActivity.getId());
+        //设置时间监听器标志位
         t.setFlag(true);
+        //启动时间监听器
         t.start();
-
         return "一键开始监听时间";
     }
 
+    /**
+     * 一键结束时间监听
+     * 请求：/icisActivity/oneBtnToStopTimeListener.html
+     * 请求类型：POST
+     * @return 一键监听结果
+     */
     @RequestMapping(value = "oneBtnToStopTimeListener", method = RequestMethod.POST)
     @ResponseBody
     public String oneBtnToStopTimeListener() {
+        //设置标志位结束监听
         t.setFlag(false);
         return "一键结束监听时间";
     }
@@ -258,11 +276,19 @@ public class IcisActivityController {
         }
     }
 
+    /**
+     * 时间监听器内部类
+     */
     class TimeTest extends Thread implements Runnable {
+        //监听器标志位
         boolean flag;
+        //活动状态
         int n;
+        //监听开始时间
         Date startTime;
+        //监听结束时间
         Date finalTime;
+        //活动id
         Long activityId;
 
         public boolean isFlag() {
@@ -312,18 +338,23 @@ public class IcisActivityController {
         @Override
         public void run() {
             while (flag) {
+                //获取当前时间
                 Date now = new Date();
+                //判断是否处于该时间段内
                 if ((now.after(startTime) || now.equals(startTime)) &&
                         (now.equals(finalTime) || now.before(finalTime))) {
                     n = 1;
                 } else {
                     n = 0;
                 }
+                //修改允许签到状态
                 IcisActivity icisActivity = new IcisActivity();
                 icisActivity.setId(activityId);
                 icisActivity.setState(n);
+                //更新数据库状态
                 icisActivityServiceI.updateByPrimaryKeySelective(icisActivity);
                 try {
+                    //每5秒监听一次
                     Thread.sleep(5000);
                 } catch (Exception e) {
                     e.printStackTrace();
