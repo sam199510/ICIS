@@ -38,4 +38,9 @@ public class IcisActivityServiceImpl implements IcisActivityServiceI {
     public int updateByPrimaryKeySelective(IcisActivity record) {
         return this.icisActivityMapper.updateByPrimaryKeySelective(record);
     }
+
+    @Override
+    public IcisActivity selectIcisActivityToday() {
+        return this.icisActivityMapper.selectIcisActivityToday();
+    }
 }

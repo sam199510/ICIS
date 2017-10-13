@@ -23,4 +23,6 @@ public interface IcisActivityServiceI {
     public IcisActivity selectUnderwayIcisActivity(Integer state);
 
     public int updateByPrimaryKeySelective(IcisActivity record);
+
+    public IcisActivity selectIcisActivityToday();
 }

@@ -29,7 +29,7 @@
     <!--<form action="/icisDynamic/commentDynamic.html" method="post">-->
     <!--<form action="/icisDynamic/selectAllIcisDynamic.html" method="post">-->
     <!--<form action="/icisResident/login.html" method="post">-->
-    <form action="/icisActivity/publishActivity.html" method="post" enctype="multipart/form-data">
+    <!--<form action="/icisActivity/publishActivity.html" method="post" enctype="multipart/form-data">-->
     <!--<form action="/icisActivity/seleceAllIcisActivity.html" method="post">-->
     <!--<form action="/icisRepairs/addIcisRepairsRecord.html" method="post" enctype="multipart/form-data">-->
     <!--<form action="/icisRepairs/completeRepairs.html" method="post">-->
@@ -42,8 +42,7 @@
     <!--<form action="/icisSignIn/signIn.html" method="post">-->
     <!--<form action="/icisSignIn/timeTest.html" method="post">-->
     <!--<form action="/icisActivity/changeActivityState.html" method="post">-->
-        <input type="text" name="startTime" value="2017-10-13 9:00:00"><br><br>
-        <input type="text" name="finalTime" value="2017-10-13 17:00:00"><br><br>
+    <form action="/icisActivity/oneBtnToStartTimeListener.html" method="post">
         <!--<input type="text" name="signInAddress" value="A2 506"><br><br>-->
         <!--<input type="text" name="signInOrId" value="1"><br><br>-->
         <!--<input type="text" name="signInActivity" value="Java EE企业级开发技术签到"><br><br>-->
@@ -90,18 +89,27 @@
         <!--<input type="text" name="address" value="西和公寓10#606"><br><br>-->
         <!--<input type="text" name="noteinfomation" value="暂无"><br><br>-->
         <!--<input type="text" name="publishContent" value="小区的治安是越来越好了( ⊙ o ⊙ )啊！"><br><br>-->
-        <input type="text" name="title" placeholder="活动标题" value="爱心义卖"><br><br>
-        <input type="file" name="file" placeholder="活动图片"><br><br>
+
+
+        <!--<input type="text" name="title" placeholder="活动标题" value="爱心义卖"><br><br>-->
+        <!--<input type="file" name="file" placeholder="活动图片"><br><br>-->
         <!--<input type="text" name="time" placeholder="活动举办时间" value=""><br><br>-->
-        <input type="text" name="position" placeholder="活动举办地点" value="水池旁"><br><br>
-        <input type="text" name="content1" placeholder="活动内容1" value="买东西"><br><br>
-        <input type="text" name="content2" placeholder="活动内容2" value="卖东西"><br><br>
-        <input type="text" name="content3" placeholder="活动内容3" value="哈哈哈"><br><br>
+        <!--<input type="text" name="startTime" value="2017-10-13 9:00:00"><br><br>-->
+        <!--<input type="text" name="finalTime" value="2017-10-13 17:00:00"><br><br>-->
+        <!--<input type="text" name="position" placeholder="活动举办地点" value="水池旁"><br><br>-->
+        <!--<input type="text" name="content1" placeholder="活动内容1" value="买东西"><br><br>-->
+        <!--<input type="text" name="content2" placeholder="活动内容2" value="卖东西"><br><br>-->
+        <!--<input type="text" name="content3" placeholder="活动内容3" value="哈哈哈"><br><br>-->
+
+
         <!--<input type="hidden" name="dynamicId" value="1"><br><br>-->
         <!--<input type="hidden" name="supportorId" value="2"><br><br>-->
         <!--<input type="text" name="id" value="3"><br><br>-->
         <!--<input type="text" name="state" value="1"><br><br>-->
-        <input type="submit" value="一键预约">
+        <input type="submit" value="开始">
+    </form><br><br><br><br><br><br>
+    <form action="/icisActivity/oneBtnToStopTimeListener.html" method="post">
+        <input type="submit" value="结束">
     </form>
 </body>
 </html>

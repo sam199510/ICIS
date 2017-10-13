@@ -43,6 +43,9 @@ public class IcisActivityController {
         this.icisActivityServiceI = icisActivityServiceI;
     }
 
+    //声明一个时间测试类对象
+    TimeTest t;
+
     /**
      * 获取所有社区活动
      * 请求：/icisActivity/seleceAllIcisActivity.html
@@ -195,6 +198,28 @@ public class IcisActivityController {
         }
     }
 
+
+    @RequestMapping(value = "oneBtnToStartTimeListener", method = RequestMethod.POST)
+    @ResponseBody
+    public String oneBtnToStartTimeListener(){
+        IcisActivity icisActivity = this.icisActivityServiceI.selectIcisActivityToday();
+        t = new TimeTest();
+        t.setStartTime(icisActivity.getAllowSignInStartTime());
+        t.setFinalTime(icisActivity.getAllowSignInFinalTime());
+        t.setActivityId(icisActivity.getId());
+        t.setFlag(true);
+        t.start();
+
+        return "一键开始监听时间";
+    }
+
+    @RequestMapping(value = "oneBtnToStopTimeListener", method = RequestMethod.POST)
+    @ResponseBody
+    public String oneBtnToStopTimeListener() {
+        t.setFlag(false);
+        return "一键结束监听时间";
+    }
+
     /**
      * 社区活动图片显示
      * 请求类型：GET
@@ -230,6 +255,80 @@ public class IcisActivityController {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    class TimeTest extends Thread implements Runnable {
+        boolean flag;
+        int n;
+        Date startTime;
+        Date finalTime;
+        Long activityId;
+
+        public boolean isFlag() {
+            return flag;
+        }
+
+        public void setFlag(boolean flag) {
+            this.flag = flag;
+        }
+
+        public int getN() {
+            return n;
+        }
+
+        public void setN(int n) {
+            this.n = n;
+        }
+
+        public void stopThread() {
+            flag = false;
+        }
+
+        public Date getStartTime() {
+            return startTime;
+        }
+
+        public void setStartTime(Date startTime) {
+            this.startTime = startTime;
+        }
+
+        public Date getFinalTime() {
+            return finalTime;
+        }
+
+        public void setFinalTime(Date finalTime) {
+            this.finalTime = finalTime;
+        }
+
+        public Long getActivityId() {
+            return activityId;
+        }
+
+        public void setActivityId(Long activityId) {
+            this.activityId = activityId;
+        }
+
+        @Override
+        public void run() {
+            while (flag) {
+                Date now = new Date();
+                if ((now.after(startTime) || now.equals(startTime)) &&
+                        (now.equals(finalTime) || now.before(finalTime))) {
+                    n = 1;
+                } else {
+                    n = 0;
+                }
+                IcisActivity icisActivity = new IcisActivity();
+                icisActivity.setId(activityId);
+                icisActivity.setState(n);
+                icisActivityServiceI.updateByPrimaryKeySelective(icisActivity);
+                try {
+                    Thread.sleep(5000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

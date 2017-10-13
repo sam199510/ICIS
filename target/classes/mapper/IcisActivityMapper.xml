@@ -205,4 +205,9 @@
     FROM icis_activity
     WHERE state = #{state,jdbcType=INTEGER}
   </select>
+  <select id="selectIcisActivityToday" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_activity
+    WHERE DATE_FORMAT(start_time,"%Y-%m-%d") = DATE_FORMAT(now(),"%Y-%m-%d")
+  </select>
 </mapper>

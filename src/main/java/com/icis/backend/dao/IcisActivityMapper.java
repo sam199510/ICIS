@@ -22,4 +22,6 @@ public interface IcisActivityMapper {
     List<IcisActivity> seleceAllIcisActivity();
 
     IcisActivity selectUnderwayIcisActivity(Integer state);
+
+    IcisActivity selectIcisActivityToday();
 }

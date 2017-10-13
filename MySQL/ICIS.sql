@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 11/10/2017 19:39:49
+ Date: 13/10/2017 10:09:48
 */
 
 SET NAMES utf8mb4;
@@ -37,15 +37,15 @@ CREATE TABLE `icis_activity` (
   `allow_sign_in_final_time` datetime DEFAULT NULL COMMENT '活动允许签到结束时间',
   `state` int(11) DEFAULT NULL COMMENT '活动是否已结束',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的活动表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的活动表使用';
 
 -- ----------------------------
 -- Records of icis_activity
 -- ----------------------------
 BEGIN;
 INSERT INTO `icis_activity` VALUES (1, '“Merry Christmas” 圣诞大餐', '/Users/wangxiao/Documents/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/201353115003421.jpg', '2017-10-05 18:12:09', '12月24日晚（平安夜）PM6:00-9:00', '会所西餐厅【社区活动,创意】', '精心设计圣诞精美食品。', '免费奉送圣诞礼物一份。', '现场举行大抽奖。', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `icis_activity` VALUES (2, '2017寒假社会实践 活动方案', '/Users/wangxiao/Documents/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/c03fd574882718a5f3e83e.png', '2017-10-05 18:13:30', '12月30日早 AM6:00-12:00', '圆形集合【社区活动,团结】', '集体社区清理。', '装扮自己所在区域。', '现在评比颁奖。', NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `icis_activity` VALUES (3, '义诊活动方案', '/Users/wangxiao/Documents/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/175f3e42642794c59922584ddfcae08f.jpg', '2017-10-05 18:14:22', '10月11日 全天', '圆形广场【社区活动,义诊】', '免费领取就诊卷。', '排队就诊。', 'PM 5:00-6:30领取报告单。', '2017-10-11 09:00:00', '2017-10-11 17:00:00', '2017-10-11 08:30:00', '2017-10-11 18:30:00', 1);
+INSERT INTO `icis_activity` VALUES (2, '2017寒假社会实践 活动方案', '/Users/wangxiao/Documents/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/c03fd574882718a5f3e83e.png', '2017-10-05 18:13:30', '12月30日早 AM6:00-12:00', '圆形集合【社区活动,团结】', '集体社区清理。', '装扮自己所在区域。', '现在评比颁奖。', '2017-10-11 18:30:00', '2017-10-11 20:30:00', '2017-10-11 18:00:00', '2017-10-11 21:00:00', 0);
+INSERT INTO `icis_activity` VALUES (3, '义诊活动方案', '/Users/wangxiao/Documents/IDEAWorkspace/J2EE/ICIS/src/main/webapp/images/activity/175f3e42642794c59922584ddfcae08f.jpg', '2017-10-05 18:14:22', '10月11日 全天', '圆形广场【社区活动,义诊】', '免费领取就诊卷。', '排队就诊。', 'PM 5:00-6:30领取报告单。', '2017-10-12 09:00:00', '2017-10-12 17:00:00', '2017-10-12 08:30:00', '2017-10-12 17:30:00', 0);
 COMMIT;
 
 -- ----------------------------
@@ -362,7 +362,7 @@ CREATE TABLE `icis_sign_in` (
   `sign_in_activity_final_time` datetime DEFAULT NULL COMMENT '签到活动结束时间',
   `sign_in_activity_content` varchar(500) DEFAULT NULL COMMENT '签到活动内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的用户活动签到表使用';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='作为ICIS的用户活动签到表使用';
 
 -- ----------------------------
 -- Table structure for icis_worker
