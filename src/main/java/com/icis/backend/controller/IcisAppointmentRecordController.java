@@ -449,6 +449,17 @@ public class IcisAppointmentRecordController {
         int recordSize = icisAppointmentRecords.size();
         //获取最后一个预约记录，最后一个预约记录即为正在预约的记录
         IcisAppointmentRecord icisAppointmentRecordLastRecord = icisAppointmentRecords.get(recordSize - 1);
+        //修改社工的状态
+        IcisWorker icisWorker = new IcisWorker();
+        icisWorker.setId(icisAppointmentRecordLastRecord.getWorkerId());
+        icisWorker.setState(0);
+        this.icisWorkerServiceI.updateIcisWorkState(icisWorker);
+        //修改预约项目状态
+        IcisAppointmentItem icisAppointmentItem = new IcisAppointmentItem();
+        icisAppointmentItem.setWorkerId(icisAppointmentRecordLastRecord.getWorkerId());
+        icisAppointmentItem.setState(0);
+        this.icisAppointmentItemServiceI.updateAppintmentItemState(icisAppointmentItem);
+        //数据库中取消预约
         int deleteState = this.icisAppointmentRecordServiceI.deleteByPrimaryKey(icisAppointmentRecordLastRecord.getId());
         if (deleteState == 0) {
             return "取消预约失败";
