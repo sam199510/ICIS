@@ -114,6 +114,29 @@
     <form action="/icisAppointmentRecord/selectMyIcisAppointmentRecord.html" method="post">
         <input type="hidden" name="id" value="1">
         <input type="submit" value="查看我的预约">
+    </form><br><br><br><br>
+    指定预约项目：
+    <form action="/icisAppointmentRecord/selfAppointment.html" method="post">
+        <input type="text" name="icisResidentId" value="1"><br><br>
+        <input type="text" name="icisAppointmentItemId" value="1"><br><br>
+        <input type="submit" value="预约">
+    </form><br><br><br><br>
+    查询正在预约的项目：
+    <form action="/icisAppointmentRecord/selectAppointingIcisAppointmentRecord.html" method="post">
+        <input type="text" name="workerId" value="5"><br><br>
+        <input type="text" name="residentId" value="1"><br><br>
+        <input type="submit" value="查询">
+    </form><br><br><br><br>
+    完成预约：
+    <form action="/icisAppointmentRecord/selfCompleteAppointment.html" method="post">
+        <input type="text" name="icisAppointmentRecordId" value="12"><br><br>
+        <input type="submit" value="完成预约">
+    </form><br><br><br><br>
+    取消正在预约的项目：
+    <form action="/icisAppointmentRecord/deleteAppointintIcisAppointment.html" method="post">
+        <input type="text" name="icisWorkerId" value="5"><br><br>
+        <input type="text" name="residentId" value="1"><br><br>
+        <input type="submit" value="删除">
     </form>
 </body>
 </html>

@@ -33,4 +33,18 @@ public interface IcisAppointmentItemServiceI {
      * @return 预约评分计算是否成功
      */
     public int updateAppointmentGrade(IcisAppointmentItem icisAppointmentItem);
+
+    /**
+     * 更新社工状态
+     * @param record
+     * @return 更新是否成功
+     */
+    public int updateByPrimaryKeySelective(IcisAppointmentItem record);
+
+    /**
+     * 根据员工号更改状态
+     * @param icisAppointmentItem
+     * @return 更新是否成功
+     */
+    public int updateAppintmentItemState(IcisAppointmentItem icisAppointmentItem);
 }

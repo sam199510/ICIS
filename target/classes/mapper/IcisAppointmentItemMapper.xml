@@ -164,4 +164,9 @@
     SET grade = #{grade,jdbcType=DOUBLE}
     WHERE worker_id = #{workerId,jdbcType=BIGINT}
   </update>
+  <update id="updateAppintmentItemState" parameterType="com.icis.backend.entity.IcisAppointmentItem">
+    UPDATE icis_appointment_item
+    SET state = #{state,jdbcType=INTEGER}
+    WHERE worker_id = #{workerId,jdbcType=BIGINT}
+  </update>
 </mapper>

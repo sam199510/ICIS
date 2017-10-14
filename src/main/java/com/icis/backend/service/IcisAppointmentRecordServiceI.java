@@ -61,4 +61,18 @@ public interface IcisAppointmentRecordServiceI {
      * @return 平均分
      */
     public List<IcisAppointmentRecord> selectAvgAppointmentGrade(IcisAppointmentRecord icisAppointmentRecord);
+
+    /**
+     * 按工号和用户号选择正在预约中的项目
+     * @param icisAppointmentRecord
+     * @return 预约项目记录列表
+     */
+    public List<IcisAppointmentRecord> selectByIcisResidentIdAndIcisWorkerId(IcisAppointmentRecord icisAppointmentRecord);
+
+    /**
+     * 删除预约记录
+     * @param id
+     * @return 删除是否成功
+     */
+    public int deleteByPrimaryKey(Long id);
 }

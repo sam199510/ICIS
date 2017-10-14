@@ -180,6 +180,11 @@ public class IcisAppointmentRecordController {
         //修改社工的工作状态为忙碌
         icisWorker.setState(1);
         this.icisWorkerServiceI.updateByPrimaryKey(icisWorker);
+        //修改预约项目中的社工的状态
+        IcisAppointmentItem icisAppointmentItemUpdate = new IcisAppointmentItem();
+        icisAppointmentItemUpdate.setId(icisAppointmentItem.getId());
+        icisAppointmentItemUpdate.setState(1);
+        this.icisAppointmentItemServiceI.updateByPrimaryKeySelective(icisAppointmentItemUpdate);
         //建立一个预约记录对象
         IcisAppointmentRecord icisAppointmentRecord = new IcisAppointmentRecord();
         icisAppointmentRecord.setIsCompleted(0);
@@ -217,6 +222,11 @@ public class IcisAppointmentRecordController {
         icisAppointmentRecord.setIsCompleted(1);
         Date final_time = new Date();
         icisAppointmentRecord.setFinalTime(final_time);
+        //修改预约项目中的社工的状态
+        IcisAppointmentItem icisAppointmentItemUpdate = new IcisAppointmentItem();
+        icisAppointmentItemUpdate.setWorkerId(icisAppointmentRecord.getWorkerId());
+        icisAppointmentItemUpdate.setState(0);
+        this.icisAppointmentItemServiceI.updateAppintmentItemState(icisAppointmentItemUpdate);
         //修改数据库
         int completeState = this.icisAppointmentRecordServiceI.updateByPrimaryKey(icisAppointmentRecord);
         //筛选对应id的社工账号
@@ -374,6 +384,77 @@ public class IcisAppointmentRecordController {
             icisAppointmentRecordModel.add(icisAppointmentRecordItem);
         }
         return icisAppointmentRecordModel;
+    }
+
+    /**
+     * 获取正在预约中的项目
+     * 请求：/icisAppointmentRecord/selectAppointingIcisAppointmentRecord.html
+     * 请求类型：POST
+     * @param icisAppointmentRecord
+     *        需要传入的参数有：
+     *        workerId（社工id）、residentId（用户id）
+     * @return 预约项目列表
+     */
+    @RequestMapping(value = "selectAppointingIcisAppointmentRecord", method = RequestMethod.POST)
+    @ResponseBody
+    public com.icis.backend.model.IcisAppointmentRecord selectAppointingIcisAppointmentRecord(IcisAppointmentRecord icisAppointmentRecord) {
+        //获取所有我的预约的记录的数组
+        List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectByIcisResidentIdAndIcisWorkerId(icisAppointmentRecord);
+        //计算我的预约的记录数
+        int recordSize = icisAppointmentRecords.size();
+        //获取最后一个预约记录，最后一个预约记录即为正在预约的记录
+        IcisAppointmentRecord icisAppointmentRecordLastRecord = icisAppointmentRecords.get(recordSize - 1);
+        //建立一个需要返回的对象
+        com.icis.backend.model.IcisAppointmentRecord icisAppointmentRecordReturn = new com.icis.backend.model.IcisAppointmentRecord();
+        //获取正在预约的社区用户
+        IcisResident icisResident = this.icisResidentServiceI.selectByPrimaryKey(icisAppointmentRecordLastRecord.getResidentId());
+        //获取正在被预约的社区社工
+        IcisWorker icisWorker = this.icisWorkerServiceI.selectByPrimaryKey(icisAppointmentRecordLastRecord.getWorkerId());
+        //设置返回的各种对象
+        icisAppointmentRecordReturn.setIcisWorker(icisWorker);
+        icisAppointmentRecordReturn.setIcisResident(icisResident);
+        icisAppointmentRecordReturn.setServicePhoto(icisAppointmentRecordLastRecord.getServicePhoto());
+        icisAppointmentRecordReturn.setWorkerId(icisAppointmentRecordLastRecord.getWorkerId());
+        icisAppointmentRecordReturn.setServiceGrade(icisAppointmentRecordLastRecord.getServiceGrade());
+        icisAppointmentRecordReturn.setServiceContent(icisAppointmentRecordLastRecord.getServiceContent());
+        icisAppointmentRecordReturn.setServiceComment(icisAppointmentRecordLastRecord.getServiceComment());
+        icisAppointmentRecordReturn.setResidentId(icisAppointmentRecordLastRecord.getResidentId());
+        icisAppointmentRecordReturn.setIsCompleted(icisAppointmentRecordLastRecord.getIsCompleted());
+        icisAppointmentRecordReturn.setIsApproved(icisAppointmentRecordLastRecord.getIsApproved());
+        icisAppointmentRecordReturn.setFinalTime(icisAppointmentRecordLastRecord.getFinalTime());
+        icisAppointmentRecordReturn.setCreateTime(icisAppointmentRecordLastRecord.getCreateTime());
+        icisAppointmentRecordReturn.setCompany(icisAppointmentRecordLastRecord.getCompany());
+        icisAppointmentRecordReturn.setId(icisAppointmentRecordLastRecord.getId());
+        return icisAppointmentRecordReturn;
+    }
+
+    /**
+     * 取消预约
+     * 请求：/icisAppointmentRecord/deleteAppointintIcisAppointment.html
+     * 请求类型：POST
+     * @param icisWorkerId 此id为员工id
+     * @param residentId 此id为社区人员id
+     * @return 取消预约是否成功
+     */
+    @RequestMapping(value = "deleteAppointintIcisAppointment", method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteAppointintIcisAppointment(Long icisWorkerId, Long residentId) {
+        //建立需要删除的对象
+        IcisAppointmentRecord icisAppointmentRecordDelete = new IcisAppointmentRecord();
+        icisAppointmentRecordDelete.setWorkerId(icisWorkerId);
+        icisAppointmentRecordDelete.setResidentId(residentId);
+        //获取所有我的预约的记录的数组
+        List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectByIcisResidentIdAndIcisWorkerId(icisAppointmentRecordDelete);
+        //计算我的预约的记录数
+        int recordSize = icisAppointmentRecords.size();
+        //获取最后一个预约记录，最后一个预约记录即为正在预约的记录
+        IcisAppointmentRecord icisAppointmentRecordLastRecord = icisAppointmentRecords.get(recordSize - 1);
+        int deleteState = this.icisAppointmentRecordServiceI.deleteByPrimaryKey(icisAppointmentRecordLastRecord.getId());
+        if (deleteState == 0) {
+            return "取消预约失败";
+        } else {
+            return "取消预约成功";
+        }
     }
 
     /**

@@ -39,4 +39,14 @@ public class IcisAppointmentItemServiceImpl implements IcisAppointmentItemServic
     public int updateAppointmentGrade(IcisAppointmentItem icisAppointmentItem) {
         return this.icisAppointmentItemMapper.updateAppointmentGrade(icisAppointmentItem);
     }
+
+    @Override
+    public int updateByPrimaryKeySelective(IcisAppointmentItem record) {
+        return this.icisAppointmentItemMapper.updateByPrimaryKeySelective(record);
+    }
+
+    @Override
+    public int updateAppintmentItemState(IcisAppointmentItem icisAppointmentItem) {
+        return this.icisAppointmentItemMapper.updateAppintmentItemState(icisAppointmentItem);
+    }
 }

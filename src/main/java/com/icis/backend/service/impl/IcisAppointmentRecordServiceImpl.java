@@ -58,4 +58,14 @@ public class IcisAppointmentRecordServiceImpl implements IcisAppointmentRecordSe
     public List<IcisAppointmentRecord> selectAvgAppointmentGrade(IcisAppointmentRecord icisAppointmentRecord) {
         return this.icisAppointmentRecordMapper.selectAvgAppointmentGrade(icisAppointmentRecord);
     }
+
+    @Override
+    public List<IcisAppointmentRecord> selectByIcisResidentIdAndIcisWorkerId(IcisAppointmentRecord icisAppointmentRecord) {
+        return this.icisAppointmentRecordMapper.selectByIcisResidentIdAndIcisWorkerId(icisAppointmentRecord);
+    }
+
+    @Override
+    public int deleteByPrimaryKey(Long id) {
+        return this.icisAppointmentRecordMapper.deleteByPrimaryKey(id);
+    }
 }
