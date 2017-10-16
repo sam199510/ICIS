@@ -2,7 +2,6 @@ package com.icis.backend.controller;
 
 import com.icis.backend.entity.*;
 import com.icis.backend.entity.IcisAppointmentItem;
-import com.icis.backend.model.*;
 import com.icis.backend.service.IcisAppointmentItemServiceI;
 import com.icis.backend.service.IcisWorkerServiceI;
 import org.springframework.beans.factory.annotation.Autowired;

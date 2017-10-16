@@ -1,6 +1,5 @@
 package com.icis.backend.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.icis.backend.entity.IcisAppointmentItem;
 import com.icis.backend.entity.IcisAppointmentRecord;
 import com.icis.backend.entity.IcisResident;
@@ -302,10 +301,15 @@ public class IcisAppointmentRecordController {
     @RequestMapping(value = "selectAllIcisAppointmentRecord", method = RequestMethod.POST)
     @ResponseBody
     public List<com.icis.backend.model.IcisAppointmentRecord> selectAllIcisAppointmentRecord() {
+        //建立一个返回的记录的模型数组
         List<com.icis.backend.model.IcisAppointmentRecord> icisAppointmentRecordModel = new ArrayList<com.icis.backend.model.IcisAppointmentRecord>();
+        //去数据库中获取所有的预约记录项目
         List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectAllAppointmentRecord();
+        //循环遍历所有预约记录项目
         for (IcisAppointmentRecord icisAppointmentRecord:icisAppointmentRecords) {
+            //建立一个预约记录对象
             com.icis.backend.model.IcisAppointmentRecord icisAppointmentRecordItem = new com.icis.backend.model.IcisAppointmentRecord();
+            //设置对象的各个属性
             icisAppointmentRecordItem.setId(icisAppointmentRecord.getId());
             icisAppointmentRecordItem.setCompany(icisAppointmentRecord.getCompany());
             icisAppointmentRecordItem.setCreateTime(icisAppointmentRecord.getCreateTime());
@@ -318,7 +322,7 @@ public class IcisAppointmentRecordController {
             icisAppointmentRecordItem.setServiceGrade(icisAppointmentRecord.getServiceGrade());
             icisAppointmentRecordItem.setWorkerId(icisAppointmentRecord.getWorkerId());
             icisAppointmentRecordItem.setServicePhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisAppointmentRecord.getServicePhoto());
-
+            //设置其中的社区人员用户的头像信息
             IcisResident icisResident = this.icisResidentServiceI.selectIcisResidentByIcisResidentId(icisAppointmentRecord.getResidentId());
             if (icisResident.getHeadPhoto() == null) {
                 icisResident.setHeadPhoto(null);
@@ -326,7 +330,7 @@ public class IcisAppointmentRecordController {
                 icisResident.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisResident.getHeadPhoto());
             }
             icisAppointmentRecordItem.setIcisResident(icisResident);
-
+            //设置其中的社区工人的头像信息
             IcisWorker icisWorker = this.icisWorkerServiceI.selectIcisWorkerByIcisWorkerId(icisAppointmentRecord.getWorkerId());
             if (icisWorker.getHeadPhoto() == null) {
                 icisWorker.setHeadPhoto(null);
@@ -334,6 +338,7 @@ public class IcisAppointmentRecordController {
                 icisWorker.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisWorker.getHeadPhoto());
             }
             icisAppointmentRecordItem.setIcisWorker(icisWorker);
+            //将子模型添加到数组中去
             icisAppointmentRecordModel.add(icisAppointmentRecordItem);
         }
         return icisAppointmentRecordModel;
@@ -349,10 +354,15 @@ public class IcisAppointmentRecordController {
     @RequestMapping(value = "selectMyIcisAppointmentRecord", method = RequestMethod.POST)
     @ResponseBody
     public List<com.icis.backend.model.IcisAppointmentRecord> selectMyIcisAppointmentRecord(Long id) {
+        //建立一个返回的记录的模型数组
         List<com.icis.backend.model.IcisAppointmentRecord> icisAppointmentRecordModel = new ArrayList<com.icis.backend.model.IcisAppointmentRecord>();
+        //去数据库中获取所有的预约记录项目
         List<IcisAppointmentRecord> icisAppointmentRecords = this.icisAppointmentRecordServiceI.selectMyAppointmentRecord(id);
+        //循环遍历所有预约记录项目
         for (IcisAppointmentRecord icisAppointmentRecord:icisAppointmentRecords) {
+            //建立一个新的记录对象
             com.icis.backend.model.IcisAppointmentRecord icisAppointmentRecordItem = new com.icis.backend.model.IcisAppointmentRecord();
+            //设置对象的各个属性
             icisAppointmentRecordItem.setId(icisAppointmentRecord.getId());
             icisAppointmentRecordItem.setCompany(icisAppointmentRecord.getCompany());
             icisAppointmentRecordItem.setCreateTime(icisAppointmentRecord.getCreateTime());
@@ -365,7 +375,7 @@ public class IcisAppointmentRecordController {
             icisAppointmentRecordItem.setServiceGrade(icisAppointmentRecord.getServiceGrade());
             icisAppointmentRecordItem.setWorkerId(icisAppointmentRecord.getWorkerId());
             icisAppointmentRecordItem.setServicePhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisAppointmentRecord.getServicePhoto());
-
+            //设置其中的社区人员用户的头像信息
             IcisResident icisResident = this.icisResidentServiceI.selectIcisResidentByIcisResidentId(icisAppointmentRecord.getResidentId());
             if (icisResident.getHeadPhoto() == null) {
                 icisResident.setHeadPhoto(null);
@@ -373,7 +383,7 @@ public class IcisAppointmentRecordController {
                 icisResident.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisResident.getHeadPhoto());
             }
             icisAppointmentRecordItem.setIcisResident(icisResident);
-
+            //设置其中的社区工人的头像信息
             IcisWorker icisWorker = this.icisWorkerServiceI.selectIcisWorkerByIcisWorkerId(icisAppointmentRecord.getWorkerId());
             if (icisWorker.getHeadPhoto() == null) {
                 icisWorker.setHeadPhoto(null);
@@ -381,6 +391,7 @@ public class IcisAppointmentRecordController {
                 icisWorker.setHeadPhoto("/icisAppointmentRecord/getPhoto.html?filePath=" + icisWorker.getHeadPhoto());
             }
             icisAppointmentRecordItem.setIcisWorker(icisWorker);
+            //将子模型添加到数组中去
             icisAppointmentRecordModel.add(icisAppointmentRecordItem);
         }
         return icisAppointmentRecordModel;
@@ -410,7 +421,7 @@ public class IcisAppointmentRecordController {
         IcisResident icisResident = this.icisResidentServiceI.selectByPrimaryKey(icisAppointmentRecordLastRecord.getResidentId());
         //获取正在被预约的社区社工
         IcisWorker icisWorker = this.icisWorkerServiceI.selectByPrimaryKey(icisAppointmentRecordLastRecord.getWorkerId());
-        //设置返回的各种对象
+        //设置对象的各种属性
         icisAppointmentRecordReturn.setIcisWorker(icisWorker);
         icisAppointmentRecordReturn.setIcisResident(icisResident);
         icisAppointmentRecordReturn.setServicePhoto(icisAppointmentRecordLastRecord.getServicePhoto());
