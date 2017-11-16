@@ -2,6 +2,9 @@ package com.icis.backend.entity;
 
 import java.util.Date;
 
+/**
+ * 活动表实体类
+ */
 public class IcisActivity {
     private Long id;
 

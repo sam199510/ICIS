@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icis.backend.dao.IcisActivityMapper">
+  <resultMap id="BaseResultMap" type="com.icis.backend.entity.IcisActivity">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="publish_time" jdbcType="TIMESTAMP" property="publishTime" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+    <result column="position" jdbcType="VARCHAR" property="position" />
+    <result column="content1" jdbcType="VARCHAR" property="content1" />
+    <result column="content2" jdbcType="VARCHAR" property="content2" />
+    <result column="content3" jdbcType="VARCHAR" property="content3" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="final_time" jdbcType="TIMESTAMP" property="finalTime" />
+    <result column="allow_sign_in_start_time" jdbcType="TIMESTAMP" property="allowSignInStartTime" />
+    <result column="allow_sign_in_final_time" jdbcType="TIMESTAMP" property="allowSignInFinalTime" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, title, image, publish_time, time, position, content1, content2, content3, start_time, 
+    final_time, allow_sign_in_start_time, allow_sign_in_final_time, state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icis_activity
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from icis_activity
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.icis.backend.entity.IcisActivity">
+    insert into icis_activity (id, title, image, 
+      publish_time, time, position, 
+      content1, content2, content3, 
+      start_time, final_time, allow_sign_in_start_time, 
+      allow_sign_in_final_time, state)
+    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, 
+      #{publishTime,jdbcType=TIMESTAMP}, #{time,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}, 
+      #{content1,jdbcType=VARCHAR}, #{content2,jdbcType=VARCHAR}, #{content3,jdbcType=VARCHAR}, 
+      #{startTime,jdbcType=TIMESTAMP}, #{finalTime,jdbcType=TIMESTAMP}, #{allowSignInStartTime,jdbcType=TIMESTAMP}, 
+      #{allowSignInFinalTime,jdbcType=TIMESTAMP}, #{state,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.icis.backend.entity.IcisActivity">
+    insert into icis_activity
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="image != null">
+        image,
+      </if>
+      <if test="publishTime != null">
+        publish_time,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="position != null">
+        position,
+      </if>
+      <if test="content1 != null">
+        content1,
+      </if>
+      <if test="content2 != null">
+        content2,
+      </if>
+      <if test="content3 != null">
+        content3,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="finalTime != null">
+        final_time,
+      </if>
+      <if test="allowSignInStartTime != null">
+        allow_sign_in_start_time,
+      </if>
+      <if test="allowSignInFinalTime != null">
+        allow_sign_in_final_time,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="publishTime != null">
+        #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="content1 != null">
+        #{content1,jdbcType=VARCHAR},
+      </if>
+      <if test="content2 != null">
+        #{content2,jdbcType=VARCHAR},
+      </if>
+      <if test="content3 != null">
+        #{content3,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finalTime != null">
+        #{finalTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="allowSignInStartTime != null">
+        #{allowSignInStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="allowSignInFinalTime != null">
+        #{allowSignInFinalTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icis.backend.entity.IcisActivity">
+    update icis_activity
+    <set>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="publishTime != null">
+        publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        position = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="content1 != null">
+        content1 = #{content1,jdbcType=VARCHAR},
+      </if>
+      <if test="content2 != null">
+        content2 = #{content2,jdbcType=VARCHAR},
+      </if>
+      <if test="content3 != null">
+        content3 = #{content3,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finalTime != null">
+        final_time = #{finalTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="allowSignInStartTime != null">
+        allow_sign_in_start_time = #{allowSignInStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="allowSignInFinalTime != null">
+        allow_sign_in_final_time = #{allowSignInFinalTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icis.backend.entity.IcisActivity">
+    update icis_activity
+    set title = #{title,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      time = #{time,jdbcType=VARCHAR},
+      position = #{position,jdbcType=VARCHAR},
+      content1 = #{content1,jdbcType=VARCHAR},
+      content2 = #{content2,jdbcType=VARCHAR},
+      content3 = #{content3,jdbcType=VARCHAR},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      final_time = #{finalTime,jdbcType=TIMESTAMP},
+      allow_sign_in_start_time = #{allowSignInStartTime,jdbcType=TIMESTAMP},
+      allow_sign_in_final_time = #{allowSignInFinalTime,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="seleceAllIcisActivity" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_activity
+    ORDER BY publish_time DESC
+  </select>
+  <select id="selectUnderwayIcisActivity" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_activity
+    WHERE state = #{state,jdbcType=INTEGER}
+  </select>
+  <select id="selectIcisActivityToday" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_activity
+    WHERE DATE_FORMAT(start_time,"%Y-%m-%d") = DATE_FORMAT(now(),"%Y-%m-%d")
+  </select>
+</mapper>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icis.backend.dao.IcisDynamicMapper">
+  <resultMap id="BaseResultMap" type="com.icis.backend.entity.IcisDynamic">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
+    <result column="publish_time" jdbcType="TIMESTAMP" property="publishTime" />
+    <result column="publish_content" jdbcType="VARCHAR" property="publishContent" />
+    <result column="publish_photo" jdbcType="VARCHAR" property="publishPhoto" />
+    <result column="publish_position" jdbcType="VARCHAR" property="publishPosition" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, creator_id, publish_time, publish_content, publish_photo, publish_position
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icis_dynamic
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from icis_dynamic
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.icis.backend.entity.IcisDynamic">
+    insert into icis_dynamic (id, creator_id, publish_time, 
+      publish_content, publish_photo, publish_position
+      )
+    values (#{id,jdbcType=BIGINT}, #{creatorId,jdbcType=BIGINT}, #{publishTime,jdbcType=TIMESTAMP}, 
+      #{publishContent,jdbcType=VARCHAR}, #{publishPhoto,jdbcType=VARCHAR}, #{publishPosition,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.icis.backend.entity.IcisDynamic">
+    insert into icis_dynamic
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="creatorId != null">
+        creator_id,
+      </if>
+      <if test="publishTime != null">
+        publish_time,
+      </if>
+      <if test="publishContent != null">
+        publish_content,
+      </if>
+      <if test="publishPhoto != null">
+        publish_photo,
+      </if>
+      <if test="publishPosition != null">
+        publish_position,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="creatorId != null">
+        #{creatorId,jdbcType=BIGINT},
+      </if>
+      <if test="publishTime != null">
+        #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="publishContent != null">
+        #{publishContent,jdbcType=VARCHAR},
+      </if>
+      <if test="publishPhoto != null">
+        #{publishPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="publishPosition != null">
+        #{publishPosition,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icis.backend.entity.IcisDynamic">
+    update icis_dynamic
+    <set>
+      <if test="creatorId != null">
+        creator_id = #{creatorId,jdbcType=BIGINT},
+      </if>
+      <if test="publishTime != null">
+        publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="publishContent != null">
+        publish_content = #{publishContent,jdbcType=VARCHAR},
+      </if>
+      <if test="publishPhoto != null">
+        publish_photo = #{publishPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="publishPosition != null">
+        publish_position = #{publishPosition,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icis.backend.entity.IcisDynamic">
+    update icis_dynamic
+    set creator_id = #{creatorId,jdbcType=BIGINT},
+      publish_time = #{publishTime,jdbcType=TIMESTAMP},
+      publish_content = #{publishContent,jdbcType=VARCHAR},
+      publish_photo = #{publishPhoto,jdbcType=VARCHAR},
+      publish_position = #{publishPosition,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectAllIcisDynamic" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_dynamic
+    ORDER BY publish_time DESC
+  </select>
+</mapper>

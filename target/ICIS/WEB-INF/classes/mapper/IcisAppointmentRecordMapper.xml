@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icis.backend.dao.IcisAppointmentRecordMapper">
+  <resultMap id="BaseResultMap" type="com.icis.backend.entity.IcisAppointmentRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="service_photo" jdbcType="VARCHAR" property="servicePhoto" />
+    <result column="service_content" jdbcType="VARCHAR" property="serviceContent" />
+    <result column="worker_id" jdbcType="BIGINT" property="workerId" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="is_approved" jdbcType="INTEGER" property="isApproved" />
+    <result column="resident_id" jdbcType="BIGINT" property="residentId" />
+    <result column="is_completed" jdbcType="INTEGER" property="isCompleted" />
+    <result column="service_grade" jdbcType="INTEGER" property="serviceGrade" />
+    <result column="service_comment" jdbcType="VARCHAR" property="serviceComment" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="final_time" jdbcType="TIMESTAMP" property="finalTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, service_photo, service_content, worker_id, company, is_approved, resident_id, 
+    is_completed, service_grade, service_comment, create_time, final_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from icis_appointment_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from icis_appointment_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.icis.backend.entity.IcisAppointmentRecord">
+    insert into icis_appointment_record (id, service_photo, service_content, 
+      worker_id, company, is_approved, 
+      resident_id, is_completed, service_grade, 
+      service_comment, create_time, final_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{servicePhoto,jdbcType=VARCHAR}, #{serviceContent,jdbcType=VARCHAR}, 
+      #{workerId,jdbcType=BIGINT}, #{company,jdbcType=VARCHAR}, #{isApproved,jdbcType=INTEGER}, 
+      #{residentId,jdbcType=BIGINT}, #{isCompleted,jdbcType=INTEGER}, #{serviceGrade,jdbcType=INTEGER}, 
+      #{serviceComment,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{finalTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.icis.backend.entity.IcisAppointmentRecord">
+    insert into icis_appointment_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="servicePhoto != null">
+        service_photo,
+      </if>
+      <if test="serviceContent != null">
+        service_content,
+      </if>
+      <if test="workerId != null">
+        worker_id,
+      </if>
+      <if test="company != null">
+        company,
+      </if>
+      <if test="isApproved != null">
+        is_approved,
+      </if>
+      <if test="residentId != null">
+        resident_id,
+      </if>
+      <if test="isCompleted != null">
+        is_completed,
+      </if>
+      <if test="serviceGrade != null">
+        service_grade,
+      </if>
+      <if test="serviceComment != null">
+        service_comment,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="finalTime != null">
+        final_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="servicePhoto != null">
+        #{servicePhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceContent != null">
+        #{serviceContent,jdbcType=VARCHAR},
+      </if>
+      <if test="workerId != null">
+        #{workerId,jdbcType=BIGINT},
+      </if>
+      <if test="company != null">
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="isApproved != null">
+        #{isApproved,jdbcType=INTEGER},
+      </if>
+      <if test="residentId != null">
+        #{residentId,jdbcType=BIGINT},
+      </if>
+      <if test="isCompleted != null">
+        #{isCompleted,jdbcType=INTEGER},
+      </if>
+      <if test="serviceGrade != null">
+        #{serviceGrade,jdbcType=INTEGER},
+      </if>
+      <if test="serviceComment != null">
+        #{serviceComment,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finalTime != null">
+        #{finalTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icis.backend.entity.IcisAppointmentRecord">
+    update icis_appointment_record
+    <set>
+      <if test="servicePhoto != null">
+        service_photo = #{servicePhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceContent != null">
+        service_content = #{serviceContent,jdbcType=VARCHAR},
+      </if>
+      <if test="workerId != null">
+        worker_id = #{workerId,jdbcType=BIGINT},
+      </if>
+      <if test="company != null">
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="isApproved != null">
+        is_approved = #{isApproved,jdbcType=INTEGER},
+      </if>
+      <if test="residentId != null">
+        resident_id = #{residentId,jdbcType=BIGINT},
+      </if>
+      <if test="isCompleted != null">
+        is_completed = #{isCompleted,jdbcType=INTEGER},
+      </if>
+      <if test="serviceGrade != null">
+        service_grade = #{serviceGrade,jdbcType=INTEGER},
+      </if>
+      <if test="serviceComment != null">
+        service_comment = #{serviceComment,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finalTime != null">
+        final_time = #{finalTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icis.backend.entity.IcisAppointmentRecord">
+    update icis_appointment_record
+    set service_photo = #{servicePhoto,jdbcType=VARCHAR},
+      service_content = #{serviceContent,jdbcType=VARCHAR},
+      worker_id = #{workerId,jdbcType=BIGINT},
+      company = #{company,jdbcType=VARCHAR},
+      is_approved = #{isApproved,jdbcType=INTEGER},
+      resident_id = #{residentId,jdbcType=BIGINT},
+      is_completed = #{isCompleted,jdbcType=INTEGER},
+      service_grade = #{serviceGrade,jdbcType=INTEGER},
+      service_comment = #{serviceComment,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      final_time = #{finalTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="completeAppointment" parameterType="com.icis.backend.entity.IcisAppointmentRecord">
+    UPDATE icis_appointment_record
+    SET is_completed = #{isCompleted,jdbcType=INTEGER},
+        final_time = #{finalTime,jdbcType=TIMESTAMP}
+    WHERE id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="commentAppointment" parameterType="com.icis.backend.entity.IcisAppointmentRecord">
+    UPDATE icis_appointment_record
+    SET service_grade = #{serviceGrade,jdbcType=INTEGER},
+        service_comment = #{serviceComment,jdbcType=VARCHAR}
+    WHERE id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectAllAppointmentRecord" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_appointment_record
+    ORDER BY create_time DESC
+  </select>
+  <select id="selectMyAppointmentRecord" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_appointment_record
+    WHERE resident_id = #{residentId,jdbcType=BIGINT}
+    ORDER BY create_time DESC
+  </select>
+  <select id="selectAvgAppointmentGrade" parameterType="com.icis.backend.entity.IcisAppointmentRecord" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_appointment_record
+    WHERE worker_id = #{workerId,jdbcType=BIGINT}
+          AND is_completed = #{isCompleted,jdbcType=INTEGER}
+  </select>
+  <select id="selectByIcisResidentIdAndIcisWorkerId" parameterType="com.icis.backend.entity.IcisAppointmentRecord" resultMap="BaseResultMap">
+    SELECT *
+    FROM icis_appointment_record
+    WHERE resident_id = #{residentId,jdbcType=BIGINT}
+          AND worker_id = #{workerId,jdbcType=BIGINT}
+  </select>
+</mapper>
