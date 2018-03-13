@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : MySQL
+ Source Server         : LocalMySQL
  Source Server Type    : MySQL
  Source Server Version : 50719
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 50719
  File Encoding         : 65001
 
- Date: 13/10/2017 10:09:48
+ Date: 13/03/2018 17:42:44
 */
 
 SET NAMES utf8mb4;
@@ -95,7 +95,7 @@ CREATE TABLE `icis_appointment_record` (
   `create_time` datetime DEFAULT NULL COMMENT '预约开始时间',
   `final_time` datetime DEFAULT NULL COMMENT '预约结束时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的预约记录表使用';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='作为ICIS的预约记录表使用';
 
 -- ----------------------------
 -- Records of icis_appointment_record
@@ -111,6 +111,7 @@ INSERT INTO `icis_appointment_record` VALUES (7, NULL, '打扫卫生，一个月
 INSERT INTO `icis_appointment_record` VALUES (8, NULL, '打扫卫生，一个月需要付1000块钱', 5, '家政服务公司', 1, 1, 1, 8, '服务态度不错', '2017-10-10 12:52:18', '2017-10-10 12:52:20');
 INSERT INTO `icis_appointment_record` VALUES (9, NULL, '打扫卫生，一个月需要付1000块钱', 5, '家政服务公司', 1, 1, 1, 9, '服务态度不错！！！', '2017-10-10 12:52:41', '2017-10-10 12:52:42');
 INSERT INTO `icis_appointment_record` VALUES (10, NULL, '打扫卫生，一个月需要付1000块钱', 5, '家政服务公司', 1, 1, 1, 8, '服务态度还行!!!', '2017-10-10 12:53:03', '2017-10-10 12:53:05');
+INSERT INTO `icis_appointment_record` VALUES (12, NULL, '打扫卫生，一个月需要付1000块钱', 5, '家政服务公司', 1, 1, 1, NULL, NULL, '2017-10-14 17:09:23', '2017-10-14 17:09:58');
 COMMIT;
 
 -- ----------------------------
@@ -344,7 +345,7 @@ INSERT INTO `icis_resident` VALUES (10, 'znsh10108', '123456', NULL, NULL, NULL,
 INSERT INTO `icis_resident` VALUES (11, 'znsh10109', '123456', NULL, NULL, NULL, 'Retala', NULL, NULL, NULL, NULL);
 INSERT INTO `icis_resident` VALUES (12, 'znsh10110', '123456', NULL, NULL, NULL, 'Literal', NULL, NULL, NULL, NULL);
 INSERT INTO `icis_resident` VALUES (13, 'znsh01101', '123456', NULL, NULL, NULL, 'DNAad', NULL, NULL, NULL, NULL);
-INSERT INTO `icis_resident` VALUES (14, 'znsh01102', '123456', NULL, NULL, NULL, 'TIM', NULL, NULL, NULL, NULL);
+INSERT INTO `icis_resident` VALUES (14, 'znsh01102', '123456', NULL, NULL, '', 'TIM', NULL, NULL, NULL, NULL);
 INSERT INTO `icis_resident` VALUES (15, 'ZNSH01103', '123456', NULL, NULL, NULL, 'AKadjust', NULL, NULL, NULL, NULL);
 COMMIT;
 
