@@ -112,6 +112,5 @@ public class IcisContactsController {
         } else {
             return "更新联系人信息失败";
         }
-        
     }
 }
